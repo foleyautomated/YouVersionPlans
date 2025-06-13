@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="KuxHGb5gbUufpV_xXC5FwA" Reference="UrhlpJTAA0mM_0uS1fnqrw/iMHhF6snT0WcOsSNP7C8jQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bible.com/reading-plans/15876-finding-god-in-your-depression" CVScreenId="31c7b221-40f1-4a3d-9a1f-e34eb6924be8" DesignTimeRectangle="1258, 1229, 323, 96" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Sample Day 1' tag='A' /&gt;" Guid="793b7e82-69f5-47dd-b354-884900b086a0" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finding God In Your Depression' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="ce7b802eaa0e121d69973e4dca733a2c.png" xmlns="">0jQxr9y4EBES6H65g3WZ_iQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

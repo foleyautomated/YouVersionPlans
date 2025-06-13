@@ -1,0 +1,16 @@
+﻿{
+  "Name": "ProseArea",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "xa8b__cE30K4t0fd16WJEQ",
+  "Reference": "UrhlpJTAA0mM_0uS1fnqrw/xa8b__cE30K4t0fd16WJEQ",
+  "ParentRef": "UrhlpJTAA0mM_0uS1fnqrw/7wRqhOXXSEqyXAWnHr_BXA",
+  "Created": "2025-06-12T23:19:59.7795574Z",
+  "Updated": "2025-06-12T23:21:03.8492239Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
