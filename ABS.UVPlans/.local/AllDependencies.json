@@ -18910,9 +18910,9 @@
     "restore": {
       "projectUniqueName": "ABS.UVPlans",
       "projectName": "ABS.UVPlans",
-      "projectPath": "C:\\_Repos_ABS\\ABS.UVPlans\\.local",
+      "projectPath": "C:\\_Repos_ABS\\YouVersionPlans\\ABS.UVPlans\\.local",
       "packagesPath": "C:\\Users\\Foley\\.nuget\\packages\\",
-      "outputPath": "C:\\_Repos_ABS\\ABS.UVPlans\\.local",
+      "outputPath": "C:\\_Repos_ABS\\YouVersionPlans\\ABS.UVPlans\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"

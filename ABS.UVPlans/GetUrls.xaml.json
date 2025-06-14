@@ -1,0 +1,33 @@
+{
+  "DisplayName": "GetUrls",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_sourceJsonFileName",
+      "DisplayName": "in_sourceJsonFileName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "plans.json",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_destinationJsonFileName",
+      "DisplayName": "in_destinationJsonFileName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "bibleproject_plans_with_devotion.json",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

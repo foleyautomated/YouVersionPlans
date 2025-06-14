@@ -1,0 +1,13 @@
+﻿{
+  "Name": "SearchResultArea",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "9DblU8yl0UqJfNpehoA8WA",
+  "Reference": "UrhlpJTAA0mM_0uS1fnqrw/9DblU8yl0UqJfNpehoA8WA",
+  "ParentRef": "UrhlpJTAA0mM_0uS1fnqrw/7wRqhOXXSEqyXAWnHr_BXA",
+  "Created": "2025-06-13T17:52:37.1944841Z",
+  "Updated": "2025-06-13T17:52:37.1944841Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
