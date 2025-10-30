@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Love  Bible Reading Plans & Daily Devo",
+  "Type": "Screen",
+  "Id": "sZEXaElZ8kqP_29mqxMyHw",
+  "Reference": "UrhlpJTAA0mM_0uS1fnqrw/sZEXaElZ8kqP_29mqxMyHw",
+  "ParentRef": "UrhlpJTAA0mM_0uS1fnqrw/VNP2mUPyhkO-X7vBb4Y9xw",
+  "Created": "2025-10-29T17:29:31.8829078Z",
+  "Updated": "2025-10-29T17:29:31.8829078Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

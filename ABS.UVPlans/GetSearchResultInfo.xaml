@@ -29,8 +29,6 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Drawing</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
@@ -53,6 +51,8 @@
       <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Web.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -115,7 +115,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetSearchResultInfo" sap:VirtualizedContainerService.HintSize="1483.3333333333333,2472.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetSearchResultInfo" sap:VirtualizedContainerService.HintSize="1308.6666666666665,2475.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JArray" Name="resultsJA" />
       <Variable x:TypeArguments="x:String" Name="jsonContent" />
@@ -149,13 +149,13 @@
         </InArgument>
       </ui:DeserializeJsonArray.JsonString>
     </ui:DeserializeJsonArray>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="YouVersion Search" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="538,2084.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="568358d5-9f29-45ef-9b9b-139d79c37e57" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="YouVersion Search" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="538,2087.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="568358d5-9f29-45ef-9b9b-139d79c37e57" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,1833.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="504,1836" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ResultTitleElements" />
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ResultDayElements" />

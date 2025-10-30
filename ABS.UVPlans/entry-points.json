@@ -1,0 +1,49 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "GetDevotionalContent.xaml",
+      "uniqueId": "ecc595cf-a54e-470f-ab93-62aee288ba99",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_DaysInPlan": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "in_PlanShortUrl": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_DevotionalContent": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "filePath": "GetUrls.xaml",
+      "uniqueId": "48a2e643-480c-4671-8637-4eb2a925aa8e",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_sourceJsonFileName": {
+            "type": "string"
+          },
+          "in_destinationJsonFileName": {
+            "type": "string"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}
