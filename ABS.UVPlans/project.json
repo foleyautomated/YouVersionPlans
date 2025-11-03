@@ -4,7 +4,7 @@
   "description": "Blank Process",
   "main": "GetUrls.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[25.4.4]",
+    "UiPath.System.Activities": "25.10.3",
     "UiPath.UIAutomation.Activities": "[25.10.4]",
     "UiPath.WebAPI.Activities": "1.21.1"
   },
@@ -46,14 +46,14 @@
   "expressionLanguage": "CSharp",
   "entryPoints": [
     {
-      "filePath": "GetDevotionalContent.xaml",
-      "uniqueId": "ecc595cf-a54e-470f-ab93-62aee288ba99",
+      "filePath": "GetUrls.xaml",
+      "uniqueId": "48a2e643-480c-4671-8637-4eb2a925aa8e",
       "input": [],
       "output": []
     },
     {
-      "filePath": "GetUrls.xaml",
-      "uniqueId": "48a2e643-480c-4671-8637-4eb2a925aa8e",
+      "filePath": "GetDevotionalContent.xaml",
+      "uniqueId": "f522120d-620a-436c-b68d-f530dcfb5c6f",
       "input": [],
       "output": []
     }

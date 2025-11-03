@@ -1,7 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DeterminePagesInCategory" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetAllPlanPaginationUrls" this:GetAllPlanPaginationUrls.in_PlanUrl="https://www.bible.com/reading-plans/62043-fathers-love-30-days-of-discovering-god-as-fat/day/1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_CategoryUrlPath" Type="InArgument(x:String)" />
-    <x:Property Name="out_CategoryListPageCount" Type="OutArgument(x:String)" />
+    <x:Property Name="in_PlanUrl" Type="InArgument(x:String)" />
+    <x:Property Name="out_PlanPaginationUrls" Type="OutArgument(scg:List(x:String))" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -28,6 +28,8 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Drawing</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
@@ -38,10 +40,9 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Activities.System.Arrays</x:String>
       <x:String>System.Linq.Expressions</x:String>
-      <x:String>System.Numerics</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -76,8 +77,8 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
@@ -95,43 +96,64 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
-      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DeterminePagesInCategory" sap:VirtualizedContainerService.HintSize="1308.6666666666665,1291.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetAllPlanPaginationUrls" sap:VirtualizedContainerService.HintSize="1297.3333333333333,1228.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Default="https://www.bible.com/en/reading-plans-collection/782-love?page=1" Name="url" />
+      <Variable x:TypeArguments="x:String" Name="url" />
+      <Variable x:TypeArguments="ui:UiElement" Name="UVBrowser" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Any UV Page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1268.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="72a8db89-05a0-41dd-9fec-4b95189b4527" Version="V2">
+    <Assign sap:VirtualizedContainerService.HintSize="484,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">url</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">in_PlanUrl</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Any UV Page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,1029.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="84d7ab99-12a6-4d62-b2e5-2a0bc6ad52c9" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1026.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,787.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="PaginationLinks" />
               <Variable x:TypeArguments="ui:UiElement" Name="Pagination" />
-              <Variable x:TypeArguments="scg:List(x:String)" Name="PaginationUrls" />
+              <Variable x:TypeArguments="x:String" Name="UrlWithoutPageNumber" />
+              <Variable x:TypeArguments="x:String" Name="PlanPageCount" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'SVG'" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="416,116.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Version="V4">
+              <uix:NGoToUrl.Url>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">url</CSharpValue>
+                </InArgument>
+              </uix:NGoToUrl.Url>
+            </uix:NGoToUrl>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'SVG'" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
-                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">Pagination</CSharpReference>
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">Pagination</CSharpReference>
                 </OutArgument>
               </ui:WaitUiElementAppear.FoundElement>
               <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="17432fe4-e3d6-4d0b-b6c9-2e2457279972" InformativeScreenshot="9fe2cc8475f1df74370d130d53896045" Selector="&lt;html app='chrome.exe' url='https://www.bible.com*' /&gt;&lt;webctrl aria-label='Pagination' tag='DIV' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="17432fe4-e3d6-4d0b-b6c9-2e2457279972" InformativeScreenshot="9fe2cc8475f1df74370d130d53896045" Selector="&lt;webctrl aria-label='Pagination' tag='DIV' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -141,17 +163,17 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:FindChildren DisplayName="Find Children" Filter="&lt;webctrl href='*?page=*' tag='A' /&gt;" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren DisplayName="Find Children" Filter="&lt;webctrl   /&gt;" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Children>
                 <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
-                  <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">PaginationLinks</CSharpReference>
+                  <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">PaginationLinks</CSharpReference>
                 </OutArgument>
               </ui:FindChildren.Children>
               <ui:FindChildren.Target>
                 <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="046970be-3ee2-4da0-b2bf-9dc2b83082a4">
                   <ui:Target.Element>
                     <InArgument x:TypeArguments="ui:UiElement">
-                      <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">Pagination</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">Pagination</CSharpValue>
                     </InArgument>
                   </ui:Target.Element>
                   <ui:Target.TimeoutMS>
@@ -163,58 +185,40 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <Assign DisplayName="Determine Largest Page Number" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="Determine Largest Page Number" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:List(x:String)">
-                  <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">PaginationUrls</CSharpReference>
+                  <CSharpReference x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">out_PlanPaginationUrls</CSharpReference>
                 </OutArgument>
               </Assign.To>
               <Assign.Value>
                 <InArgument x:TypeArguments="scg:List(x:String)">
-                  <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12" xml:space="preserve">PaginationLinks
-	.Select(pl =&gt; pl.Get("href", false).ToString())
-	.Select(url =&gt; url.Split(new char[] {'/'}).Last())
+                  <CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22" xml:space="preserve">PaginationLinks.Select(pl =&gt;  GlobalVariablesNamespace.GlobalVariables.UV_BASE_URL + pl.Get("href", false).ToString())
+	.Where(href =&gt; href.Contains("/day/"))
 	.ToList()</CSharpValue>
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">string.Join(Environment.NewLine, PaginationUrls)</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Message>
-            </ui:LogMessage>
-            <Assign sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_4">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">out_CategoryListPageCount</CSharpReference>
-                </OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18" xml:space="preserve">PaginationUrls
-	.Select(query =&gt; query.Split(new char[] {'='}).Last())
-	.OrderBy( num =&gt; num)
-	.Last()</CSharpValue>
-                </InArgument>
-              </Assign.Value>
-            </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info">
-              <ui:LogMessage.Message>
-                <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">"Largest Page Number: " + out_CategoryListPageCount</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">"Plan Page URLS: " + string.Join(";", out_PlanPaginationUrls)</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OutUiElement>
+        <OutArgument x:TypeArguments="ui:UiElement">
+          <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">UVBrowser</CSharpReference>
+        </OutArgument>
+      </uix:NApplicationCard.OutUiElement>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="3829, -11, 3862, 2110" BrowserType="Chrome" ContentHash="tAW01VTcU0aF8RzVVo1E6w" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM2SURBVDhPbZPtT1NnGMafv4S5rTSD9pzTc05LX07HlixqtAbKq4AQmcQPnR8At2GVVZyZm0thWVskAaYtcVtG4t7SgDDa0hdoNWPgVBLiB0FnsnMWTWaWucSF617OgWHi9iS/3Feu+/59fNjengOsoEh1JUXOFRX5fslr14peWX2GtJONnSL/sqhICwVFatZdNu+W/TlFRl6RKeeRKOfeIm9kcXtKW7tt9FudrCI1s5RLWky7JUq5JaS9DqSrnchUOzHnFjH/hoKUS9zp9H3mNReM2y1nic04xQczLpGmZA755lqsnDpusNQbwPXAEawEe7DS100L7U24ebqPFlrrjVvdueoSVZZ0iGqySqTvRCsyTTW4PXgOtz5+n1aHPqQ53x6sXRiiGwNBmvI6cWc0QtOvK/jezkN3kg5RY1/bbeo3DhtdkThM7d+NTGcbsm8eormDdZjvbMNsQw2K3QHKdBykQqCLvvVU4Yqdh+7oLpuUBXXSLtCXggU/dLQgc/QwZlsbke7qQKE7QNMNNUgdacdklYz8saM009qIr2QBuqO77LIoqJ9LAsUrzMj2HsON2CCKoRMoBI/j1miUSqETVHyvjyZ4C1YvjlCysRYTghW6o7ssIfJqQuRpvMKMVPdbWDzTj+LZEOWCb6P0wQAK/X20OHCKpjvbsfTJebradRhxSUDcxlNc5FU2KnDquMDRKM/hkrsKlzxOfOaQEVdcSLzqwbgkIuH1YKJaQVxxG4wJHAxH4FR2gefUEZ6jYc6KmKXSYHh7xiorMGy17PSxymd9xFxOIzZeZZ9aLdqgyUTh8nKEbTzCooBwZQXCJhOM7jkGzWZEJRHZc2dpsq1FYx+9bHqQfLeX1lPTtNEfoo2ed2g9cZHWF9K0np39D/eL8/T43hoR/UVxf63Gzux6sbTxY57o6WOiPU1Ern1El7+grffkf/iTiECP7tyk81ZumZ0uMzWNNTbQb8vXaHN5iXB3jTZXf6bNp7/T5pOHz/GI/v7jIf16+ycaa6in/rKyQ0z/kidfeKllgLNdi/jr1Gh9vRbx+7Xofp8a8fm0qM+nxXz/5gPa0O69augVy/Vg2a4O3f0HAgpZR+Y2RQMAAAAASUVORK5CYII=" InformativeScreenshot="2612b3f6a1187cdb219653efddae78af.jpg" Reference="UrhlpJTAA0mM_0uS1fnqrw/81tL_Bb93UuQ_sV7fJ7xFQ" Selector="&lt;html app='chrome.exe' url='https://www.bible.com/*' /&gt;" Version="V2">
+        <uix:TargetApp Area="3829, -11, 3862, 2110" BrowserType="Chrome" ContentHash="h7_oKlyeE0WbTR_Mp1YQng" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM2SURBVDhPbZPtT1NnGMafv4S5rTSD9pzTc05LX07HlixqtAbKq4AQmcQPnR8At2GVVZyZm0thWVskAaYtcVtG4t7SgDDa0hdoNWPgVBLiB0FnsnMWTWaWucSF617OgWHi9iS/3Feu+/59fNjengOsoEh1JUXOFRX5fslr14peWX2GtJONnSL/sqhICwVFatZdNu+W/TlFRl6RKeeRKOfeIm9kcXtKW7tt9FudrCI1s5RLWky7JUq5JaS9DqSrnchUOzHnFjH/hoKUS9zp9H3mNReM2y1nic04xQczLpGmZA755lqsnDpusNQbwPXAEawEe7DS100L7U24ebqPFlrrjVvdueoSVZZ0iGqySqTvRCsyTTW4PXgOtz5+n1aHPqQ53x6sXRiiGwNBmvI6cWc0QtOvK/jezkN3kg5RY1/bbeo3DhtdkThM7d+NTGcbsm8eormDdZjvbMNsQw2K3QHKdBykQqCLvvVU4Yqdh+7oLpuUBXXSLtCXggU/dLQgc/QwZlsbke7qQKE7QNMNNUgdacdklYz8saM009qIr2QBuqO77LIoqJ9LAsUrzMj2HsON2CCKoRMoBI/j1miUSqETVHyvjyZ4C1YvjlCysRYTghW6o7ssIfJqQuRpvMKMVPdbWDzTj+LZEOWCb6P0wQAK/X20OHCKpjvbsfTJebradRhxSUDcxlNc5FU2KnDquMDRKM/hkrsKlzxOfOaQEVdcSLzqwbgkIuH1YKJaQVxxG4wJHAxH4FR2gefUEZ6jYc6KmKXSYHh7xiorMGy17PSxymd9xFxOIzZeZZ9aLdqgyUTh8nKEbTzCooBwZQXCJhOM7jkGzWZEJRHZc2dpsq1FYx+9bHqQfLeX1lPTtNEfoo2ed2g9cZHWF9K0np39D/eL8/T43hoR/UVxf63Gzux6sbTxY57o6WOiPU1Ern1El7+grffkf/iTiECP7tyk81ZumZ0uMzWNNTbQb8vXaHN5iXB3jTZXf6bNp7/T5pOHz/GI/v7jIf16+ycaa6in/rKyQ0z/kidfeKllgLNdi/jr1Gh9vRbx+7Xofp8a8fm0qM+nxXz/5gPa0O69augVy/Vg2a4O3f0HAgpZR+Y2RQMAAAAASUVORK5CYII=" InformativeScreenshot="2612b3f6a1187cdb219653efddae78af.jpg" Reference="UrhlpJTAA0mM_0uS1fnqrw/81tL_Bb93UuQ_sV7fJ7xFQ" Selector="&lt;html app='chrome.exe' url='https://www.bible.com/*' /&gt;" Version="V2">
           <uix:TargetApp.Url>
             <InArgument x:TypeArguments="x:String">
-              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">url</CSharpValue>
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">url</CSharpValue>
             </InArgument>
           </uix:TargetApp.Url>
         </uix:TargetApp>

@@ -1,33 +1,5 @@
 {
   "ActivityBindings": {
-    "UiPath.Activities.System.Agentic.RunAgent": [
-      {
-        "Type": "agent",
-        "PublishNullValues": false,
-        "Key": {
-          "Value": "BindingsKey",
-          "ValueSource": "Property"
-        },
-        "Values": {
-          "name": {
-            "Value": "ProcessName",
-            "ValueSource": "Property"
-          },
-          "folderPath": {
-            "Value": "FolderPath",
-            "ValueSource": "Property"
-          }
-        },
-        "Arguments": {
-          "BindingsVersion": {
-            "Value": "2.1",
-            "ValueSource": "Constant"
-          }
-        },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
-      }
-    ],
     "UiPath.Activities.System.Jobs.RunJob": [
       {
         "Type": "process",
@@ -336,6 +308,34 @@
         "DefaultValueSource": "Property"
       }
     ],
+    "UiPath.Core.Activities.GetSecret": [
+      {
+        "Type": "asset",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "folderPath": {
+            "Value": "FolderPath",
+            "ValueSource": "Property"
+          },
+          "name": {
+            "Value": "AssetName",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.2",
+            "ValueSource": "Constant"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
     "UiPath.Core.Activities.GetTransactionItem": [
       {
         "Type": "queue",
@@ -424,7 +424,7 @@
             "ValueSource": "Property"
           },
           "BindingsVersion": {
-            "Value": "2.1",
+            "Value": "2.2",
             "ValueSource": "Constant"
           }
         },
@@ -475,6 +475,34 @@
           },
           "name": {
             "Value": "CredentialName",
+            "ValueSource": "Property"
+          }
+        },
+        "Arguments": {
+          "BindingsVersion": {
+            "Value": "2.2",
+            "ValueSource": "Constant"
+          }
+        },
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.Core.Activities.SetSecret": [
+      {
+        "Type": "asset",
+        "PublishNullValues": false,
+        "Key": {
+          "Value": "BindingsKey",
+          "ValueSource": "Property"
+        },
+        "Values": {
+          "folderPath": {
+            "Value": "FolderPath",
+            "ValueSource": "Property"
+          },
+          "name": {
+            "Value": "AssetName",
             "ValueSource": "Property"
           }
         },

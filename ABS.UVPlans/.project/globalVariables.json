@@ -4,7 +4,7 @@
     "Name": "UV_BASE_URL",
     "TypeFullyQualifiedName": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
     "UnresolvedTypeFullyQualifiedName": null,
-    "Expression": "\"https://www.bible.com/\"",
+    "Expression": "\"https://www.bible.com\"",
     "IsLiteral": false
   }
 ]

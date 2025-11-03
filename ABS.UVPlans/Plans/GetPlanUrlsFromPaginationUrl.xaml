@@ -1,9 +1,7 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetAllPlanUrlsOnCategoryPage" this:GetAllPlanUrlsOnCategoryPage.in_LanguageCode="en" this:GetAllPlanUrlsOnCategoryPage.in_CategoryUrlPath="reading-plans-collection/782-love" this:GetAllPlanUrlsOnCategoryPage.in_PageNumber="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetAllPlanUrlsOnCategoryPage" this:GetAllPlanUrlsOnCategoryPage.in_CategoryPaginationUrl="https://www.bible.com/reading-plans-collection/919-doubt?page=2" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_LanguageCode" Type="InArgument(x:String)" />
-    <x:Property Name="out_PlansJA" Type="OutArgument(njl:JArray)" />
-    <x:Property Name="in_CategoryUrlPath" Type="InArgument(x:String)" />
-    <x:Property Name="in_PageNumber" Type="InArgument(x:String)" />
+    <x:Property Name="in_CategoryPaginationUrl" Type="InArgument(x:String)" />
+    <x:Property Name="out_PlanUrlsJA" Type="OutArgument(njl:JArray)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -109,7 +107,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetAllPlanUrlsOnCategoryPage" sap:VirtualizedContainerService.HintSize="1308.6666666666665,2434.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetAllPlanUrlsOnCategoryPage" sap:VirtualizedContainerService.HintSize="1302,2551.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://www.bible.com/en/reading-plans-collection/782-love?page=1" Name="url" />
     </Sequence.Variables>
@@ -126,11 +124,11 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">GlobalVariablesNamespace.GlobalVariables.UV_BASE_URL + "/" + in_LanguageCode + "/" + in_CategoryUrlPath + "?page=" + in_PageNumber</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">in_CategoryPaginationUrl</CSharpValue>
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log - URL" sap:VirtualizedContainerService.HintSize="520,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+    <ui:LogMessage DisplayName="Log - URL" sap:VirtualizedContainerService.HintSize="520,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">"Plan Page URL: " + url</CSharpValue>
@@ -140,7 +138,7 @@
     <Assign DisplayName="Assign - Init List&lt;JO&gt;" sap:VirtualizedContainerService.HintSize="520,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JArray">
-          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">out_PlansJA</CSharpReference>
+          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">out_PlanUrlsJA</CSharpReference>
         </OutArgument>
       </Assign.To>
       <Assign.Value>
@@ -149,13 +147,13 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Browser" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="520,1714.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" IsIncognito="True" OpenMode="IfNotOpen" ScopeGuid="bf6543e6-17b9-4af0-b487-11f74c765a70" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Any UV Page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="520,1831.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="fbb40f26-de01-4eb8-ad99-4a6d92ffede6" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1463.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="486,1580" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="PlanCards" />
               <Variable x:TypeArguments="ui:UiElement" Name="CardsUL" />
@@ -164,36 +162,41 @@
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find - Cards UL" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="452,116.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Version="V4">
+              <uix:NGoToUrl.Url>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">url</CSharpValue>
+                </InArgument>
+              </uix:NGoToUrl.Url>
+            </uix:NGoToUrl>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find - Cards UL" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
-                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">CardsUL</CSharpReference>
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">CardsUL</CSharpReference>
                 </OutArgument>
               </ui:WaitUiElementAppear.FoundElement>
               <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="834f14b2-da60-451f-8cbb-c46310ecea16" InformativeScreenshot="4c2e0ba7993f4330d898dedbdbee638a" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='flex flex-col*' /&gt;&lt;webctrl tag='UL' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="834f14b2-da60-451f-8cbb-c46310ecea16" InformativeScreenshot="4c2e0ba7993f4330d898dedbdbee638a" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='flex flex-col*' /&gt;&lt;webctrl tag='UL' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
-                  <ui:Target.WaitForReady>
-                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                  </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <ui:FindChildren DisplayName="Find Children 'A'" Filter="&lt;webctrl tag='A' /&gt;" sap:VirtualizedContainerService.HintSize="452,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+            <ui:FindChildren DisplayName="Find Children 'A'" Filter="&lt;webctrl tag='A' /&gt;" sap:VirtualizedContainerService.HintSize="452,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_5" Scope="FIND_DESCENDANTS">
               <ui:FindChildren.Children>
                 <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
-                  <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">PlanCards</CSharpReference>
+                  <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">PlanCards</CSharpReference>
                 </OutArgument>
               </ui:FindChildren.Children>
               <ui:FindChildren.Target>
                 <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="b73e6c59-8c6b-4c57-9568-98330459a56f">
                   <ui:Target.Element>
                     <InArgument x:TypeArguments="ui:UiElement">
-                      <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">CardsUL</CSharpValue>
+                      <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">CardsUL</CSharpValue>
                     </InArgument>
                   </ui:Target.Element>
                   <ui:Target.TimeoutMS>
@@ -205,13 +208,13 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each card" sap:VirtualizedContainerService.HintSize="452,1142" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each card" sap:VirtualizedContainerService.HintSize="452,1142" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="card" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1016.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1016.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="PlanURL" />
                       <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ImagesInHref" />
@@ -225,29 +228,29 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="Assign - URL" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign DisplayName="Assign - URL" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">
-                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">PlanURL</CSharpReference>
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">PlanURL</CSharpReference>
                         </OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">card.Get("href", false).ToString()</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">card.Get("href", false).ToString()</CSharpValue>
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:FindChildren DisplayName="Find Children - IMGs" Filter="&lt;webctrl tag='IMG' /&gt;" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_DESCENDANTS">
+                    <ui:FindChildren DisplayName="Find Children - IMGs" Filter="&lt;webctrl tag='IMG' /&gt;" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_6" Scope="FIND_DESCENDANTS">
                       <ui:FindChildren.Children>
                         <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
-                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">ImagesInHref</CSharpReference>
+                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">ImagesInHref</CSharpReference>
                         </OutArgument>
                       </ui:FindChildren.Children>
                       <ui:FindChildren.Target>
                         <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="d86497ae-bbb8-49bb-800d-97c2e1242c65">
                           <ui:Target.Element>
                             <InArgument x:TypeArguments="ui:UiElement">
-                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">card</CSharpValue>
+                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">card</CSharpValue>
                             </InArgument>
                           </ui:Target.Element>
                           <ui:Target.TimeoutMS>
@@ -259,29 +262,29 @@
                         </ui:Target>
                       </ui:FindChildren.Target>
                     </ui:FindChildren>
-                    <Assign DisplayName="Assign - ImgURL" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign DisplayName="Assign - ImgURL" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_8">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">
-                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">ImgURL</CSharpReference>
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">ImgURL</CSharpReference>
                         </OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">ImagesInHref.ToList()[0].Get("src", false).ToString()</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">ImagesInHref.ToList()[0].Get("src", false).ToString()</CSharpValue>
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:FindChildren DisplayName="Find Children - H2s" Filter="&lt;webctrl tag='H2' /&gt;" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_DESCENDANTS">
+                    <ui:FindChildren DisplayName="Find Children - H2s" Filter="&lt;webctrl tag='H2' /&gt;" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_7" Scope="FIND_DESCENDANTS">
                       <ui:FindChildren.Children>
                         <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
-                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">H2sInHRef</CSharpReference>
+                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">H2sInHRef</CSharpReference>
                         </OutArgument>
                       </ui:FindChildren.Children>
                       <ui:FindChildren.Target>
                         <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="d86497ae-bbb8-49bb-800d-97c2e1242c65">
                           <ui:Target.Element>
                             <InArgument x:TypeArguments="ui:UiElement">
-                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">card</CSharpValue>
+                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">card</CSharpValue>
                             </InArgument>
                           </ui:Target.Element>
                           <ui:Target.TimeoutMS>
@@ -293,31 +296,31 @@
                         </ui:Target>
                       </ui:FindChildren.Target>
                     </ui:FindChildren>
-                    <Assign DisplayName="Assign - PlanName" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign DisplayName="Assign - PlanName" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_9">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">
-                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">PlanName</CSharpReference>
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">PlanName</CSharpReference>
                         </OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">H2sInHRef.ToList()[0].Get("aaname", false).ToString()</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">H2sInHRef.ToList()[0].Get("aaname", false).ToString()</CSharpValue>
                         </InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="JObject jo = new JObject {&#xA;&#x9;{&quot;PlanUrl&quot;, in_planURL},&#xA;&#x9;{&quot;ImgUrl&quot;, in_imgURL},&#xA;&#x9;{&quot;PlanName&quot;, in_planName}&#xA;};&#xA;&#xA;io_listOfPlanJO.Add(jo);" DisplayName="Invoke - Add JO" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="JObject jo = new JObject {&#xA;&#x9;{&quot;PlanUrl&quot;, in_planURL},&#xA;&#x9;{&quot;ImgUrl&quot;, in_imgURL},&#xA;&#x9;{&quot;PlanName&quot;, in_planName}&#xA;};&#xA;&#xA;io_listOfPlanJO.Add(jo);" DisplayName="Invoke - Add JO" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
                       <ui:InvokeCode.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_planURL">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">PlanURL</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">PlanURL</CSharpValue>
                         </InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_imgURL">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">ImgURL</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">ImgURL</CSharpValue>
                         </InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_planName">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">PlanName</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">PlanName</CSharpValue>
                         </InArgument>
                         <InOutArgument x:TypeArguments="njl:JArray" x:Key="io_listOfPlanJO">
-                          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">out_PlansJA</CSharpReference>
+                          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">out_PlanUrlsJA</CSharpReference>
                         </InOutArgument>
                       </ui:InvokeCode.Arguments>
                     </ui:InvokeCode>
@@ -326,7 +329,7 @@
               </ui:ForEach.Body>
               <ui:ForEach.Values>
                 <InArgument x:TypeArguments="sc:IEnumerable">
-                  <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">PlanCards</CSharpValue>
+                  <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">PlanCards</CSharpValue>
                 </InArgument>
               </ui:ForEach.Values>
             </ui:ForEach>
@@ -334,10 +337,10 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-3234, 426, 2820, 1566" BrowserType="Chrome" ContentHash="sUT6qKDGNkWnUj1Tndqltw" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="fda358a198e8af8e7a339be02ca754d8.png" Reference="UrhlpJTAA0mM_0uS1fnqrw/7wRqhOXXSEqyXAWnHr_BXA" Selector="&lt;html app='chrome.exe' url='http://bible.com/*' /&gt;" Version="V2">
+        <uix:TargetApp Area="3829, -11, 3862, 2110" BrowserType="Chrome" ContentHash="h7_oKlyeE0WbTR_Mp1YQng" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM2SURBVDhPbZPtT1NnGMafv4S5rTSD9pzTc05LX07HlixqtAbKq4AQmcQPnR8At2GVVZyZm0thWVskAaYtcVtG4t7SgDDa0hdoNWPgVBLiB0FnsnMWTWaWucSF617OgWHi9iS/3Feu+/59fNjengOsoEh1JUXOFRX5fslr14peWX2GtJONnSL/sqhICwVFatZdNu+W/TlFRl6RKeeRKOfeIm9kcXtKW7tt9FudrCI1s5RLWky7JUq5JaS9DqSrnchUOzHnFjH/hoKUS9zp9H3mNReM2y1nic04xQczLpGmZA755lqsnDpusNQbwPXAEawEe7DS100L7U24ebqPFlrrjVvdueoSVZZ0iGqySqTvRCsyTTW4PXgOtz5+n1aHPqQ53x6sXRiiGwNBmvI6cWc0QtOvK/jezkN3kg5RY1/bbeo3DhtdkThM7d+NTGcbsm8eormDdZjvbMNsQw2K3QHKdBykQqCLvvVU4Yqdh+7oLpuUBXXSLtCXggU/dLQgc/QwZlsbke7qQKE7QNMNNUgdacdklYz8saM009qIr2QBuqO77LIoqJ9LAsUrzMj2HsON2CCKoRMoBI/j1miUSqETVHyvjyZ4C1YvjlCysRYTghW6o7ssIfJqQuRpvMKMVPdbWDzTj+LZEOWCb6P0wQAK/X20OHCKpjvbsfTJebradRhxSUDcxlNc5FU2KnDquMDRKM/hkrsKlzxOfOaQEVdcSLzqwbgkIuH1YKJaQVxxG4wJHAxH4FR2gefUEZ6jYc6KmKXSYHh7xiorMGy17PSxymd9xFxOIzZeZZ9aLdqgyUTh8nKEbTzCooBwZQXCJhOM7jkGzWZEJRHZc2dpsq1FYx+9bHqQfLeX1lPTtNEfoo2ed2g9cZHWF9K0np39D/eL8/T43hoR/UVxf63Gzux6sbTxY57o6WOiPU1Ern1El7+grffkf/iTiECP7tyk81ZumZ0uMzWNNTbQb8vXaHN5iXB3jTZXf6bNp7/T5pOHz/GI/v7jIf16+ycaa6in/rKyQ0z/kidfeKllgLNdi/jr1Gh9vRbx+7Xofp8a8fm0qM+nxXz/5gPa0O69augVy/Vg2a4O3f0HAgpZR+Y2RQMAAAAASUVORK5CYII=" InformativeScreenshot="2612b3f6a1187cdb219653efddae78af.jpg" Reference="UrhlpJTAA0mM_0uS1fnqrw/81tL_Bb93UuQ_sV7fJ7xFQ" Selector="&lt;html app='chrome.exe' url='https://www.bible.com/*' /&gt;" Version="V2">
           <uix:TargetApp.Url>
             <InArgument x:TypeArguments="x:String">
-              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">url</CSharpValue>
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">url</CSharpValue>
             </InArgument>
           </uix:TargetApp.Url>
         </uix:TargetApp>
@@ -346,7 +349,7 @@
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="520,167.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
-          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">out_PlansJA.ToString()</CSharpValue>
+          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">out_PlanUrlsJA.ToString()</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>

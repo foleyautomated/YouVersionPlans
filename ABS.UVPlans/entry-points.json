@@ -3,7 +3,7 @@
   "entryPoints": [
     {
       "filePath": "GetDevotionalContent.xaml",
-      "uniqueId": "ecc595cf-a54e-470f-ab93-62aee288ba99",
+      "uniqueId": "f522120d-620a-436c-b68d-f530dcfb5c6f",
       "type": "process",
       "input": {
         "type": "object",
@@ -13,7 +13,7 @@
             "minimum": -2147483648,
             "maximum": 2147483647
           },
-          "in_PlanShortUrl": {
+          "in_PlanFirstPageUrl": {
             "type": "string"
           }
         },

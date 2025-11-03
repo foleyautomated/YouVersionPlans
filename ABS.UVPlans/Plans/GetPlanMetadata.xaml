@@ -1,0 +1,615 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetPlanMetadata" this:GetPlanMetadata.in_PlanInfoUrl="https://www.bible.com/reading-plans/9306-5-days-to-freedom-from-angry-parenting" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_PlanMetadataJO" Type="OutArgument(njl:JObject)" />
+    <x:Property Name="in_PlanInfoUrl" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetPlanMetadata" sap:VirtualizedContainerService.HintSize="1297.3333333333333,4625.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="url" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap2010:Annotation.AnnotationText="French Plan 20037:&#xD;&#xA;https://www.bible.com/fr/reading-plans/20037-how-to-love-people-you-disagree-with&#xD;&#xA;&#xD;&#xA;ALSO ACCESSIBLE BY:&#xD;&#xA;https://www.bible.com/fr/reading-plans/20037&#xD;&#xA;&#xD;&#xA;English Plan 20037:&#xD;&#xA;https://www.bible.com/reading-plans/20037-how-to-love-people-you-disagree-with" DisplayName="Assign - url" sap:VirtualizedContainerService.HintSize="484,352" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">url</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_PlanInfoUrl</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Any UV Page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="484,4250.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="727d22c6-3329-4bd5-a1b7-ba8a260f9b7f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,4008.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:UiElement" Name="DescriptionParagraph" />
+              <Variable x:TypeArguments="ui:UiElement" Name="MoreInfoSVG" />
+              <Variable x:TypeArguments="ui:UiElement" Name="MoreInfoDiv" />
+              <Variable x:TypeArguments="x:String" Name="PublisherNameWithMoreFrom" />
+              <Variable x:TypeArguments="x:String" Name="PublisherUrl" />
+              <Variable x:TypeArguments="ui:UiElement" Name="MoreInfoLink" />
+              <Variable x:TypeArguments="ui:UiElement" Name="PlanIntroP" />
+              <Variable x:TypeArguments="x:String" Name="PlanIntroText" />
+              <Variable x:TypeArguments="ui:UiElement" Name="PlanThankYouP" />
+              <Variable x:TypeArguments="x:String" Name="PlanThankYouText" />
+              <Variable x:TypeArguments="x:String" Name="LanguageCode" />
+              <Variable x:TypeArguments="x:String" Name="PlanId" />
+              <Variable x:TypeArguments="ui:UiElement" Name="DurationP" />
+              <Variable x:TypeArguments="x:String" Name="PlanDuration" />
+              <Variable x:TypeArguments="ui:UiElement" Name="SplashImage" />
+              <Variable x:TypeArguments="x:String" Name="SplashImageUrl" />
+              <Variable x:TypeArguments="ui:UiElement" Name="PlanH1" />
+              <Variable x:TypeArguments="x:String" Name="PlanName" />
+              <Variable x:TypeArguments="x:String" Name="PublisherName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To PlanInfoUrl " sap:VirtualizedContainerService.HintSize="416,116.66666666666667" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Version="V4">
+              <uix:NGoToUrl.Url>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">in_PlanInfoUrl</CSharpValue>
+                </InArgument>
+              </uix:NGoToUrl.Url>
+            </uix:NGoToUrl>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Load this first so that we feel confidant the rest of the page is already loaded too" DisplayName="Find Element 'P'" sap:VirtualizedContainerService.HintSize="416,184" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:WaitUiElementAppear.FoundElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">MoreInfoSVG</CSharpReference>
+                </OutArgument>
+              </ui:WaitUiElementAppear.FoundElement>
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="914e2313-e42f-4c55-96fc-ed040fd3077f" InformativeScreenshot="8c98a00906664c109249950cbcb97cc0" Selector="&lt;webctrl parentid='__next' tag='DIV' class='flex' /&gt;&lt;webctrl href='*/organizations/*' /&gt;&lt;webctrl tag='svg' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WaitUiElementAppear>
+            <ui:GetAncestor DisplayName="Get Ancestor - MoreInfoDiv" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="GetAncestor_1" UpLevels="2">
+              <ui:GetAncestor.Ancestor>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">MoreInfoDiv</CSharpReference>
+                </OutArgument>
+              </ui:GetAncestor.Ancestor>
+              <ui:GetAncestor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="74082c32-3527-4144-8b8c-0fc1a914a448">
+                  <ui:Target.Element>
+                    <InArgument x:TypeArguments="ui:UiElement">
+                      <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">MoreInfoSVG</CSharpValue>
+                    </InArgument>
+                  </ui:Target.Element>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAncestor.Target>
+            </ui:GetAncestor>
+            <ui:GetAncestor DisplayName="Get Ancestor - MoreInfoLink" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="GetAncestor_2" UpLevels="1">
+              <ui:GetAncestor.Ancestor>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">MoreInfoLink</CSharpReference>
+                </OutArgument>
+              </ui:GetAncestor.Ancestor>
+              <ui:GetAncestor.Target>
+                <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="74082c32-3527-4144-8b8c-0fc1a914a448">
+                  <ui:Target.Element>
+                    <InArgument x:TypeArguments="ui:UiElement">
+                      <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">MoreInfoSVG</CSharpValue>
+                    </InArgument>
+                  </ui:Target.Element>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:GetAncestor.Target>
+            </ui:GetAncestor>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLanguageCodeFromUrl" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Util\\GetLanguageCodeFromUrl.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_LanguageCode">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">LanguageCode</CSharpReference>
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_Url">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">in_PlanInfoUrl</CSharpValue>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <Assign DisplayName="PublisherName (With 'More From')" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">PublisherNameWithMoreFrom</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">MoreInfoDiv.Get("innertext", false).ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="StripPublisherNameMoreFrom - Invoke Workflow File (Util\\StripPublisherNameMoreFrom.xaml)" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Util\\StripPublisherNameMoreFrom.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_PublisherName">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">PublisherName</CSharpReference>
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_LanguageCode">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">LanguageCode</CSharpValue>
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_PublisherNameWithMoreFrom">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">PublisherNameWithMoreFrom</CSharpValue>
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:LogMessage DisplayName="Log PublisherName" sap:VirtualizedContainerService.HintSize="416,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">"PublisherName: " + PublisherName</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <Assign DisplayName="PublisherUrl" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">PublisherUrl</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">GlobalVariablesNamespace.GlobalVariables.UV_BASE_URL + MoreInfoLink.Get("href", false).ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'H1'" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7">
+              <ui:WaitUiElementAppear.FoundElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">PlanH1</CSharpReference>
+                </OutArgument>
+              </ui:WaitUiElementAppear.FoundElement>
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9f44a6ea-7b60-4987-88fa-b5f823858790" InformativeScreenshot="1543ecd4901e30d6ef07202a9112e63f" Selector="&lt;webctrl tag='H1' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign DisplayName="PlanName" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">PlanName</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">PlanH1.Get("innertext", false).ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find PlanSplashImage" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6">
+              <ui:WaitUiElementAppear.FoundElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">SplashImage</CSharpReference>
+                </OutArgument>
+              </ui:WaitUiElementAppear.FoundElement>
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="87c626f4-dec9-4b68-be6f-b8311726bedb" InformativeScreenshot="ddc8108e5743b88086a97d023fab0bfe" Selector="&lt;webctrl class='rounded-*' tag='IMG' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign DisplayName="SplashImageUrl" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">SplashImageUrl</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37" xml:space="preserve">GlobalVariablesNamespace.GlobalVariables.UV_BASE_URL +  SplashImage.Get("src", false).ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log PublisherUrl" sap:VirtualizedContainerService.HintSize="416,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"PublisherUrl: " + PublisherUrl</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - PlanIntroP" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+              <ui:WaitUiElementAppear.FoundElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">PlanIntroP</CSharpReference>
+                </OutArgument>
+              </ui:WaitUiElementAppear.FoundElement>
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3068ed89-eb17-4977-b875-7312dacb1417" InformativeScreenshot="02a7b78605577b5760503235d6e1b01a" Selector="&lt;webctrl isleaf='1' tag='P' class='*mbs-*' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign DisplayName="PlanIntroText" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">PlanIntroText</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">PlanIntroP.Get("innertext", false).ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log - PlanIntroText" sap:VirtualizedContainerService.HintSize="416,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">"PlanIntroText: " + PlanIntroText</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - PlanIntroP" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+              <ui:WaitUiElementAppear.FoundElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">PlanThankYouP</CSharpReference>
+                </OutArgument>
+              </ui:WaitUiElementAppear.FoundElement>
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3068ed89-eb17-4977-b875-7312dacb1417" InformativeScreenshot="9e1b680edd0c52150d02d9b531f8b2a2" Selector="&lt;webctrl parentid='__next' tag='DIV' class='*md:text-*' /&gt;&lt;webctrl tag='P' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign DisplayName="Plan Thank You Text" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">PlanThankYouText</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">PlanThankYouP.Get("innertext", false).ToString()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find PlanDurationP" sap:VirtualizedContainerService.HintSize="416,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
+              <ui:WaitUiElementAppear.FoundElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">DurationP</CSharpReference>
+                </OutArgument>
+              </ui:WaitUiElementAppear.FoundElement>
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a1331af3-e476-4d23-9960-6694821a7c88" InformativeScreenshot="2ccc43a40a54306dd1fc4e16a3aa89e8" Selector="&lt;webctrl isleaf='1' tag='P' class='*font-bold*' idx='1' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <Assign DisplayName="PlanDuration" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">PlanDuration</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">DurationP.Get("innertext", false).ToString().Split(new char[]{' '}).First()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="PlanId" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">PlanId</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">in_PlanInfoUrl.Split(new char[] { '/' }).Last().Split(new char[] { '-' }).First()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:IfElseIfV2 DisplayName="Else If - Validate Captured Items" sap:VirtualizedContainerService.HintSize="416,57.333333333333336" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+              <ui:IfElseIfV2.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">PlanIntroText.Length &lt; 20</CSharpValue>
+                </InArgument>
+              </ui:IfElseIfV2.Condition>
+              <ui:IfElseIfV2.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </ui:IfElseIfV2.Else>
+              <ui:IfElseIfV2.ElseIfs>
+                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
+                    <ui:IfElseIfBlock.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">!PublisherUrl.Contains("organization")</CSharpValue>
+                      </InArgument>
+                    </ui:IfElseIfBlock.Condition>
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw - Missing Publisher URL" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2">
+                          <InArgument x:TypeArguments="s:Exception">
+                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">new ValidationException("Publisher URL at '" + in_PlanInfoUrl + "' was doesn't actually point to an organization: " + PublisherUrl)</CSharpValue>
+                          </InArgument>
+                        </Throw>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
+                    <ui:IfElseIfBlock.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">PublisherNameWithMoreFrom.Length &lt; 2</CSharpValue>
+                      </InArgument>
+                    </ui:IfElseIfBlock.Condition>
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw - Missing Publisher Name" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3">
+                          <InArgument x:TypeArguments="s:Exception">
+                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">new ValidationException("Publisher Name at '" + in_PlanInfoUrl + "' is empty or doesnt look like a real name: '" + PublisherNameWithMoreFrom + "'")</CSharpValue>
+                          </InArgument>
+                        </Throw>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_6">
+                    <ui:IfElseIfBlock.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">!(PlanDuration.All(char.IsDigit) &amp;&amp; PlanId.All(char.IsDigit))</CSharpValue>
+                      </InArgument>
+                    </ui:IfElseIfBlock.Condition>
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw - Invalid PlanId or PlanDuration" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_4">
+                          <InArgument x:TypeArguments="s:Exception">
+                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32" xml:space="preserve">new ValidationException("PlanId and PlanDuration must be digits. PlanId: [" +  PlanId + "], PlanDuration: [" + PlanDuration + "]")</CSharpValue>
+                          </InArgument>
+                        </Throw>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                </sc:BindingList>
+              </ui:IfElseIfV2.ElseIfs>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:IfElseIfV2.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw - Missing Intro" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1">
+                    <InArgument x:TypeArguments="s:Exception">
+                      <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">new ValidationException("Plan Intro at '" + in_PlanInfoUrl + "' was too short: " + PlanIntroText)</CSharpValue>
+                    </InArgument>
+                  </Throw>
+                </Sequence>
+              </ui:IfElseIfV2.Then>
+            </ui:IfElseIfV2>
+            <Assign DisplayName="PlanMetadataJO" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="njl:JObject">
+                  <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">out_PlanMetadataJO</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="njl:JObject">
+                  <CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43" xml:space="preserve">new JObject{
+	{"PlanName", PlanName},
+	{"PlanIntro", PlanIntroText}, 
+	{"PlanThankYou",  PlanThankYouText },
+	{"PublisherName", PublisherName},
+	{"PublisherUrl", PublisherUrl},
+	{"PlanInfoUrl", in_PlanInfoUrl},
+	{"PlanLanguageCode", LanguageCode},
+	{"PlanId", PlanId},
+	{"PlanDuration", PlanDuration},
+	{"SplashImageUrl", SplashImageUrl}
+}</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:LogMessage DisplayName="Log out_PlanMetadataJO" sap:VirtualizedContainerService.HintSize="416,172.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">out_PlanMetadataJO.ToString()</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="3829, -11, 3862, 2110" BrowserType="Chrome" ContentHash="h7_oKlyeE0WbTR_Mp1YQng" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM2SURBVDhPbZPtT1NnGMafv4S5rTSD9pzTc05LX07HlixqtAbKq4AQmcQPnR8At2GVVZyZm0thWVskAaYtcVtG4t7SgDDa0hdoNWPgVBLiB0FnsnMWTWaWucSF617OgWHi9iS/3Feu+/59fNjengOsoEh1JUXOFRX5fslr14peWX2GtJONnSL/sqhICwVFatZdNu+W/TlFRl6RKeeRKOfeIm9kcXtKW7tt9FudrCI1s5RLWky7JUq5JaS9DqSrnchUOzHnFjH/hoKUS9zp9H3mNReM2y1nic04xQczLpGmZA755lqsnDpusNQbwPXAEawEe7DS100L7U24ebqPFlrrjVvdueoSVZZ0iGqySqTvRCsyTTW4PXgOtz5+n1aHPqQ53x6sXRiiGwNBmvI6cWc0QtOvK/jezkN3kg5RY1/bbeo3DhtdkThM7d+NTGcbsm8eormDdZjvbMNsQw2K3QHKdBykQqCLvvVU4Yqdh+7oLpuUBXXSLtCXggU/dLQgc/QwZlsbke7qQKE7QNMNNUgdacdklYz8saM009qIr2QBuqO77LIoqJ9LAsUrzMj2HsON2CCKoRMoBI/j1miUSqETVHyvjyZ4C1YvjlCysRYTghW6o7ssIfJqQuRpvMKMVPdbWDzTj+LZEOWCb6P0wQAK/X20OHCKpjvbsfTJebradRhxSUDcxlNc5FU2KnDquMDRKM/hkrsKlzxOfOaQEVdcSLzqwbgkIuH1YKJaQVxxG4wJHAxH4FR2gefUEZ6jYc6KmKXSYHh7xiorMGy17PSxymd9xFxOIzZeZZ9aLdqgyUTh8nKEbTzCooBwZQXCJhOM7jkGzWZEJRHZc2dpsq1FYx+9bHqQfLeX1lPTtNEfoo2ed2g9cZHWF9K0np39D/eL8/T43hoR/UVxf63Gzux6sbTxY57o6WOiPU1Ern1El7+grffkf/iTiECP7tyk81ZumZ0uMzWNNTbQb8vXaHN5iXB3jTZXf6bNp7/T5pOHz/GI/v7jIf16+ycaa6in/rKyQ0z/kidfeKllgLNdi/jr1Gh9vRbx+7Xofp8a8fm0qM+nxXz/5gPa0O69augVy/Vg2a4O3f0HAgpZR+Y2RQMAAAAASUVORK5CYII=" InformativeScreenshot="2612b3f6a1187cdb219653efddae78af.jpg" Reference="UrhlpJTAA0mM_0uS1fnqrw/81tL_Bb93UuQ_sV7fJ7xFQ" Selector="&lt;html app='chrome.exe' url='https://www.bible.com/*' /&gt;" Version="V2">
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">url</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Url>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

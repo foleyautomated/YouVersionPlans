@@ -3,10 +3,10 @@
     {
       "Package": {
         "Id": "UiPath.System.Activities",
-        "Version": "25.4.4"
+        "Version": "25.10.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\csvhelper\\16.0.0\\lib/netstandard2.1/CsvHelper.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\csvhelper\\33.0.1\\lib/net8.0/CsvHelper.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\dynamicexpresso.core\\2.12.0\\lib/netstandard2.0/DynamicExpresso.Core.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\markdig.signed\\0.31.0\\lib/net6.0/Markdig.Signed.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.applicationinsights\\2.21.0\\lib/netstandard2.0/Microsoft.ApplicationInsights.dll",
@@ -22,14 +22,16 @@
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.codeanalysis.visualbasic\\4.5.0-2.22527.10\\lib/netcoreapp3.1/Microsoft.CodeAnalysis.VisualBasic.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.3\\lib/net8.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.3\\lib/net8.0/Microsoft.Extensions.Caching.Memory.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.2\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.features\\6.0.36\\lib/net6.0/Microsoft.Extensions.Features.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.logging\\6.0.1\\lib/netstandard2.1/Microsoft.Extensions.Logging.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.3\\lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.objectpool\\5.0.17\\lib/net5.0/Microsoft.Extensions.ObjectPool.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.options\\6.0.1\\lib/netstandard2.1/Microsoft.Extensions.Options.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.1\\lib/net6.0/Microsoft.Extensions.Primitives.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.options\\9.0.3\\lib/net8.0/Microsoft.Extensions.Options.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.3\\lib/net8.0/Microsoft.Extensions.Primitives.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.management.infrastructure.cimcmdlets\\7.2.24\\runtimes/win/lib/net6.0/Microsoft.Management.Infrastructure.CimCmdlets.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\3.0.0\\runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.management.infrastructure.runtime.win\\3.0.0\\runtimes/win-x64/lib/netstandard1.6/microsoft.management.infrastructure.native.dll",
@@ -47,11 +49,19 @@
         "C:\\Users\\Foley\\.nuget\\packages\\namotion.reflection\\2.0.10\\lib/netstandard2.0/Namotion.Reflection.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\net.adamec.lib.common.dmn.engine\\1.1.1\\lib/netstandard2.0/net.adamec.lib.common.dmn.engine.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.context\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Context.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.coordination\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Coordination.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Interop.WaitHandles.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.oop\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Oop.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.tasks\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Tasks.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.cancellation\\1.1.2\\lib/netstandard2.0/Nito.Cancellation.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.collections.deque\\1.1.1\\lib/netstandard2.0/Nito.Collections.Deque.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.disposables\\2.2.1\\lib/netstandard2.1/Nito.Disposables.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\njsonschema\\10.5.2\\lib/netstandard2.0/NJsonSchema.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\nlog\\4.7.15\\lib/netstandard2.0/NLog.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\radcommons.core\\2.0.1\\lib/netstandard2.0/net.adamec.lib.common.core.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\sharpziplib\\1.3.3\\lib/netstandard2.1/ICSharpCode.SharpZipLib.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20250519.7\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\sharpziplib\\1.4.2\\lib/net6.0/ICSharpCode.SharpZipLib.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20251030.4\\lib/net6.0-windows7.0/System.Activities.ViewModels.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\system.componentmodel.composition\\6.0.0\\lib/net6.0/System.ComponentModel.Composition.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\system.componentmodel.composition.registration\\6.0.0\\lib/net6.0/System.ComponentModel.Composition.Registration.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\system.data.odbc\\6.0.1\\runtimes/win/lib/net6.0/System.Data.Odbc.dll",
@@ -80,16 +90,17 @@
         "C:\\Users\\Foley\\.nuget\\packages\\system.web.services.description\\4.9.0\\lib/netstandard2.0/System.Web.Services.Description.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.codedworkflows\\24.10.1\\lib/net6.0-windows7.0/UiPath.CodedWorkflows.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.5.17\\lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.4.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.4.4\\lib/net6.0-windows7.0/UiPath.System.Activities.Design.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.4.4\\lib/net6.0-windows7.0/UiPath.System.Activities.ViewModels.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime\\25.4.4\\lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.4.4\\lib/net6.0-windows7.0/UiPath.OrchestratorClient.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.4.4\\lib/net6.0-windows7.0/UiPath.System.Activities.Api.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.4.4\\lib/net6.0-windows7.0/UiPath.System.Activities.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.10.1\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.10.3\\lib/net6.0-windows7.0/UiPath.System.Activities.Design.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.10.3\\lib/net6.0-windows7.0/UiPath.System.Activities.ViewModels.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime\\25.10.3\\lib/net6.0-windows7.0/UiPath.System.Activities.Package.Runtime.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib/net6.0-windows7.0/UiPath.OrchestratorClient.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib/net6.0-windows7.0/UiPath.ServiceClients.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib/net6.0-windows7.0/UiPath.System.Activities.Api.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib/net6.0-windows7.0/UiPath.System.Activities.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.telemetry.client\\2.5.17\\lib/netstandard2.0/TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.4.4"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.10.3"
     },
     {
       "Package": {
@@ -99,10 +110,18 @@
       "Assemblies": [
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.azure.cognitiveservices.vision.computervision\\7.0.1\\lib/netstandard2.0/Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.2\\lib/net6.0/Microsoft.Extensions.DependencyInjection.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.rest.clientruntime\\2.3.24\\lib/netstandard2.0/Microsoft.Rest.ClientRuntime.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\microsoft.rest.clientruntime.azure\\3.3.18\\lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.context\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Context.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.coordination\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Coordination.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Interop.WaitHandles.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.oop\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Oop.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.tasks\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Tasks.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.cancellation\\1.1.2\\lib/netstandard2.0/Nito.Cancellation.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.collections.deque\\1.1.1\\lib/netstandard2.0/Nito.Collections.Deque.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.disposables\\2.2.1\\lib/netstandard2.1/Nito.Disposables.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\nlog\\4.7.15\\lib/netstandard2.0/NLog.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\polly\\7.1.0\\lib/netstandard2.0/Polly.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
@@ -130,7 +149,7 @@
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.ocr.activities\\3.22.0\\lib/net6.0-windows7.0/UiPath.OCR.Core.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.ocr.contracts\\2.17.1\\lib/net6.0-windows7.0/UiPath.OCR.Contracts.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.5.17\\lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.4.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.10.1\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.telemetry.client\\2.5.17\\lib/netstandard2.0/TelemetryClient.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.uiautomation.activities\\25.10.4\\lib/net6.0-windows7.0/UiPath.CV.Activities.Design.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.uiautomation.activities\\25.10.4\\lib/net6.0-windows7.0/UiPath.UIAutomation.Activities.Design.dll",
@@ -164,10 +183,18 @@
       "Assemblies": [
         "C:\\Users\\Foley\\.nuget\\packages\\avalonedit\\6.1.3.50\\lib/net6.0-windows7.0/ICSharpCode.AvalonEdit.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib/net6.0/Newtonsoft.Json.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.context\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Context.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.coordination\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Coordination.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Interop.WaitHandles.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.oop\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Oop.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.tasks\\5.1.2\\lib/netstandard2.0/Nito.AsyncEx.Tasks.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.cancellation\\1.1.2\\lib/netstandard2.0/Nito.Cancellation.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.collections.deque\\1.1.1\\lib/netstandard2.0/Nito.Collections.Deque.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.disposables\\2.2.1\\lib/netstandard2.1/Nito.Disposables.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\restsharp\\106.15.0\\lib/netstandard2.0/RestSharp.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/netstandard2.0/System.IO.Abstractions.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.opentelemetry.contracts\\2.5.17\\lib/netstandard2.0/UiPath.OpenTelemetry.Contracts.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.4.0\\lib/net6.0-windows7.0/UiPath.Platform.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.10.1\\lib/net6.0-windows7.0/UiPath.Platform.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.telemetry.client\\2.5.17\\lib/netstandard2.0/TelemetryClient.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.webapi.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Web.Activities.Design.dll",
         "C:\\Users\\Foley\\.nuget\\packages\\uipath.webapi.activities\\1.21.1\\lib/net6.0-windows7.0/UiPath.Web.Activities.RulesLibrary.dll",
@@ -187,13 +214,8 @@
     },
     "CsvHelper": {
       "Id": "CsvHelper",
-      "Version": "16.0.0",
-      "Dependencies": [
-        {
-          "Item1": "Microsoft.CSharp",
-          "Item2": "[4.5.0, )"
-        }
-      ]
+      "Version": "33.0.1",
+      "Dependencies": []
     },
     "DynamicExpresso.Core": {
       "Id": "DynamicExpresso.Core",
@@ -427,6 +449,42 @@
       "Version": "4.7.0",
       "Dependencies": []
     },
+    "Microsoft.Extensions.Caching.Abstractions": {
+      "Id": "Microsoft.Extensions.Caching.Abstractions",
+      "Version": "9.0.3",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Extensions.Primitives",
+          "Item2": "[9.0.3, )"
+        }
+      ]
+    },
+    "Microsoft.Extensions.Caching.Memory": {
+      "Id": "Microsoft.Extensions.Caching.Memory",
+      "Version": "9.0.3",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Extensions.Caching.Abstractions",
+          "Item2": "[9.0.3, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.DependencyInjection.Abstractions",
+          "Item2": "[9.0.3, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.Logging.Abstractions",
+          "Item2": "[9.0.3, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.Options",
+          "Item2": "[9.0.3, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.Primitives",
+          "Item2": "[9.0.3, )"
+        }
+      ]
+    },
     "Microsoft.Extensions.DependencyInjection": {
       "Id": "Microsoft.Extensions.DependencyInjection",
       "Version": "6.0.2",
@@ -439,7 +497,7 @@
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions": {
       "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
-      "Version": "6.0.0",
+      "Version": "9.0.3",
       "Dependencies": []
     },
     "Microsoft.Extensions.Features": {
@@ -475,8 +533,17 @@
     },
     "Microsoft.Extensions.Logging.Abstractions": {
       "Id": "Microsoft.Extensions.Logging.Abstractions",
-      "Version": "6.0.4",
-      "Dependencies": []
+      "Version": "9.0.3",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Extensions.DependencyInjection.Abstractions",
+          "Item2": "[9.0.3, )"
+        },
+        {
+          "Item1": "System.Diagnostics.DiagnosticSource",
+          "Item2": "[9.0.3, )"
+        }
+      ]
     },
     "Microsoft.Extensions.ObjectPool": {
       "Id": "Microsoft.Extensions.ObjectPool",
@@ -485,21 +552,21 @@
     },
     "Microsoft.Extensions.Options": {
       "Id": "Microsoft.Extensions.Options",
-      "Version": "6.0.1",
+      "Version": "9.0.3",
       "Dependencies": [
         {
           "Item1": "Microsoft.Extensions.DependencyInjection.Abstractions",
-          "Item2": "[6.0.0, )"
+          "Item2": "[9.0.3, )"
         },
         {
           "Item1": "Microsoft.Extensions.Primitives",
-          "Item2": "[6.0.1, )"
+          "Item2": "[9.0.3, )"
         }
       ]
     },
     "Microsoft.Extensions.Primitives": {
       "Id": "Microsoft.Extensions.Primitives",
-      "Version": "6.0.1",
+      "Version": "9.0.3",
       "Dependencies": []
     },
     "Microsoft.Management.Infrastructure": {
@@ -1220,6 +1287,115 @@
       "Version": "13.0.3",
       "Dependencies": []
     },
+    "Nito.AsyncEx": {
+      "Id": "Nito.AsyncEx",
+      "Version": "5.1.2",
+      "Dependencies": [
+        {
+          "Item1": "Nito.AsyncEx.Context",
+          "Item2": "[5.1.2, )"
+        },
+        {
+          "Item1": "Nito.AsyncEx.Coordination",
+          "Item2": "[5.1.2, )"
+        },
+        {
+          "Item1": "Nito.AsyncEx.Interop.WaitHandles",
+          "Item2": "[5.1.2, )"
+        },
+        {
+          "Item1": "Nito.AsyncEx.Oop",
+          "Item2": "[5.1.2, )"
+        },
+        {
+          "Item1": "Nito.AsyncEx.Tasks",
+          "Item2": "[5.1.2, )"
+        },
+        {
+          "Item1": "Nito.Cancellation",
+          "Item2": "[1.1.2, )"
+        }
+      ]
+    },
+    "Nito.AsyncEx.Context": {
+      "Id": "Nito.AsyncEx.Context",
+      "Version": "5.1.2",
+      "Dependencies": [
+        {
+          "Item1": "Nito.AsyncEx.Tasks",
+          "Item2": "[5.1.2, )"
+        }
+      ]
+    },
+    "Nito.AsyncEx.Coordination": {
+      "Id": "Nito.AsyncEx.Coordination",
+      "Version": "5.1.2",
+      "Dependencies": [
+        {
+          "Item1": "Nito.AsyncEx.Tasks",
+          "Item2": "[5.1.2, )"
+        },
+        {
+          "Item1": "Nito.Collections.Deque",
+          "Item2": "[1.1.1, )"
+        }
+      ]
+    },
+    "Nito.AsyncEx.Interop.WaitHandles": {
+      "Id": "Nito.AsyncEx.Interop.WaitHandles",
+      "Version": "5.1.2",
+      "Dependencies": [
+        {
+          "Item1": "Nito.AsyncEx.Tasks",
+          "Item2": "[5.1.2, )"
+        }
+      ]
+    },
+    "Nito.AsyncEx.Oop": {
+      "Id": "Nito.AsyncEx.Oop",
+      "Version": "5.1.2",
+      "Dependencies": [
+        {
+          "Item1": "Nito.AsyncEx.Coordination",
+          "Item2": "[5.1.2, )"
+        }
+      ]
+    },
+    "Nito.AsyncEx.Tasks": {
+      "Id": "Nito.AsyncEx.Tasks",
+      "Version": "5.1.2",
+      "Dependencies": [
+        {
+          "Item1": "Nito.Disposables",
+          "Item2": "[2.2.1, )"
+        }
+      ]
+    },
+    "Nito.Cancellation": {
+      "Id": "Nito.Cancellation",
+      "Version": "1.1.2",
+      "Dependencies": [
+        {
+          "Item1": "Nito.Disposables",
+          "Item2": "[2.2.1, )"
+        }
+      ]
+    },
+    "Nito.Collections.Deque": {
+      "Id": "Nito.Collections.Deque",
+      "Version": "1.1.1",
+      "Dependencies": []
+    },
+    "Nito.Disposables": {
+      "Id": "Nito.Disposables",
+      "Version": "2.2.1",
+      "Dependencies": [
+        {
+          "Item1": "System.Collections.Immutable",
+          "Item2": "[1.7.1, )"
+        }
+      ]
+    },
     "NJsonSchema": {
       "Id": "NJsonSchema",
       "Version": "10.5.2",
@@ -1502,12 +1678,12 @@
     },
     "SharpZipLib": {
       "Id": "SharpZipLib",
-      "Version": "1.3.3",
+      "Version": "1.4.2",
       "Dependencies": []
     },
     "System.Activities.ViewModels": {
       "Id": "System.Activities.ViewModels",
-      "Version": "1.0.0-20250519.7",
+      "Version": "1.0.0-20251030.4",
       "Dependencies": []
     },
     "System.AppContext": {
@@ -1746,7 +1922,7 @@
     },
     "System.Diagnostics.DiagnosticSource": {
       "Id": "System.Diagnostics.DiagnosticSource",
-      "Version": "8.0.0",
+      "Version": "9.0.3",
       "Dependencies": []
     },
     "System.Diagnostics.EventLog": {
@@ -3930,11 +4106,15 @@
     },
     "UiPath.Platform": {
       "Id": "UiPath.Platform",
-      "Version": "25.4.0",
+      "Version": "25.10.1",
       "Dependencies": [
         {
           "Item1": "Newtonsoft.Json",
           "Item2": "[13.0.1, )"
+        },
+        {
+          "Item1": "Nito.AsyncEx",
+          "Item2": "[5.1.2, )"
         },
         {
           "Item1": "System.IO.Abstractions",
@@ -3952,15 +4132,15 @@
     },
     "UiPath.System.Activities": {
       "Id": "UiPath.System.Activities",
-      "Version": "25.4.4",
+      "Version": "25.10.3",
       "Dependencies": [
         {
           "Item1": "UiPath.System.Activities.Runtime",
-          "Item2": "[25.4.4, )"
+          "Item2": "[25.10.3, )"
         },
         {
           "Item1": "CsvHelper",
-          "Item2": "[16.0.0, )"
+          "Item2": "[33.0.1, )"
         },
         {
           "Item1": "Microsoft.AspNet.SignalR.Client",
@@ -3985,6 +4165,14 @@
         {
           "Item1": "Microsoft.CodeAnalysis.VisualBasic",
           "Item2": "[4.5.0-2.22527.10, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.Caching.Abstractions",
+          "Item2": "[9.0.3, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.Caching.Memory",
+          "Item2": "[9.0.3, )"
         },
         {
           "Item1": "Microsoft.Management.Infrastructure",
@@ -4000,11 +4188,11 @@
         },
         {
           "Item1": "SharpZipLib",
-          "Item2": "[1.3.3, )"
+          "Item2": "[1.4.2, )"
         },
         {
           "Item1": "System.Activities.ViewModels",
-          "Item2": "[1.0.0-20250519.7, )"
+          "Item2": "[1.0.0-20251030.4, )"
         },
         {
           "Item1": "System.Management.Automation",
@@ -4016,7 +4204,7 @@
         },
         {
           "Item1": "UiPath.Platform",
-          "Item2": "[25.4.0, )"
+          "Item2": "[25.10.1, )"
         },
         {
           "Item1": "UiPath.Telemetry.Client",
@@ -4030,21 +4218,21 @@
     },
     "UiPath.System.Activities.Runtime": {
       "Id": "UiPath.System.Activities.Runtime",
-      "Version": "25.4.4",
+      "Version": "25.10.3",
       "Dependencies": [
         {
           "Item1": "UiPath.System.Activities.Runtime.Windows",
-          "Item2": "[25.4.4, )"
+          "Item2": "[25.10.3, )"
         }
       ]
     },
     "UiPath.System.Activities.Runtime.Windows": {
       "Id": "UiPath.System.Activities.Runtime.Windows",
-      "Version": "25.4.4",
+      "Version": "25.10.3",
       "Dependencies": [
         {
           "Item1": "CsvHelper",
-          "Item2": "[16.0.0, )"
+          "Item2": "[33.0.1, )"
         },
         {
           "Item1": "Microsoft.AspNet.SignalR.Client",
@@ -4069,6 +4257,14 @@
         {
           "Item1": "Microsoft.CodeAnalysis.VisualBasic",
           "Item2": "[4.5.0-2.22527.10, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.Caching.Abstractions",
+          "Item2": "[9.0.3, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.Caching.Memory",
+          "Item2": "[9.0.3, )"
         },
         {
           "Item1": "Microsoft.Management.Infrastructure",
@@ -4088,7 +4284,7 @@
         },
         {
           "Item1": "SharpZipLib",
-          "Item2": "[1.3.3, )"
+          "Item2": "[1.4.2, )"
         },
         {
           "Item1": "System.Management.Automation",
@@ -4100,7 +4296,7 @@
         },
         {
           "Item1": "UiPath.Platform",
-          "Item2": "[25.4.0, )"
+          "Item2": "[25.10.1, )"
         },
         {
           "Item1": "UiPath.Telemetry.Client",
@@ -4305,12 +4501,12 @@
     {
       "Package": {
         "Id": "CsvHelper",
-        "Version": "16.0.0"
+        "Version": "33.0.1"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\csvhelper\\16.0.0\\lib\\netstandard2.1\\CsvHelper.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\csvhelper\\33.0.1\\lib\\net8.0\\CsvHelper.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\csvhelper\\16.0.0"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\csvhelper\\33.0.1"
     },
     {
       "Package": {
@@ -4492,6 +4688,26 @@
     },
     {
       "Package": {
+        "Id": "Microsoft.Extensions.Caching.Abstractions",
+        "Version": "9.0.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.3\\lib\\net8.0\\Microsoft.Extensions.Caching.Abstractions.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.3"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Extensions.Caching.Memory",
+        "Version": "9.0.3"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.3\\lib\\net8.0\\Microsoft.Extensions.Caching.Memory.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.3"
+    },
+    {
+      "Package": {
         "Id": "Microsoft.Extensions.DependencyInjection",
         "Version": "6.0.2"
       },
@@ -4503,12 +4719,12 @@
     {
       "Package": {
         "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
-        "Version": "6.0.0"
+        "Version": "9.0.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\lib\\net8.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3"
     },
     {
       "Package": {
@@ -4533,12 +4749,12 @@
     {
       "Package": {
         "Id": "Microsoft.Extensions.Logging.Abstractions",
-        "Version": "6.0.4"
+        "Version": "9.0.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.3\\lib\\net8.0\\Microsoft.Extensions.Logging.Abstractions.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.3"
     },
     {
       "Package": {
@@ -4553,22 +4769,22 @@
     {
       "Package": {
         "Id": "Microsoft.Extensions.Options",
-        "Version": "6.0.1"
+        "Version": "9.0.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.options\\6.0.1\\lib\\netstandard2.1\\Microsoft.Extensions.Options.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.options\\9.0.3\\lib\\net8.0\\Microsoft.Extensions.Options.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.options\\6.0.1"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.options\\9.0.3"
     },
     {
       "Package": {
         "Id": "Microsoft.Extensions.Primitives",
-        "Version": "6.0.1"
+        "Version": "9.0.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.1\\lib\\net6.0\\Microsoft.Extensions.Primitives.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.3\\lib\\net8.0\\Microsoft.Extensions.Primitives.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.1"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.3"
     },
     {
       "Package": {
@@ -4856,6 +5072,94 @@
         "C:\\Users\\Foley\\.nuget\\packages\\newtonsoft.json\\13.0.3\\lib\\net6.0\\Newtonsoft.Json.dll"
       ],
       "Path": "C:\\Users\\Foley\\.nuget\\packages\\newtonsoft.json\\13.0.3"
+    },
+    {
+      "Package": {
+        "Id": "Nito.AsyncEx",
+        "Version": "5.1.2"
+      },
+      "Assemblies": [],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex\\5.1.2"
+    },
+    {
+      "Package": {
+        "Id": "Nito.AsyncEx.Context",
+        "Version": "5.1.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.context\\5.1.2\\lib\\netstandard2.0\\Nito.AsyncEx.Context.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.context\\5.1.2"
+    },
+    {
+      "Package": {
+        "Id": "Nito.AsyncEx.Coordination",
+        "Version": "5.1.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.coordination\\5.1.2\\lib\\netstandard2.0\\Nito.AsyncEx.Coordination.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.coordination\\5.1.2"
+    },
+    {
+      "Package": {
+        "Id": "Nito.AsyncEx.Interop.WaitHandles",
+        "Version": "5.1.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.2\\lib\\netstandard2.0\\Nito.AsyncEx.Interop.WaitHandles.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.2"
+    },
+    {
+      "Package": {
+        "Id": "Nito.AsyncEx.Oop",
+        "Version": "5.1.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.oop\\5.1.2\\lib\\netstandard2.0\\Nito.AsyncEx.Oop.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.oop\\5.1.2"
+    },
+    {
+      "Package": {
+        "Id": "Nito.AsyncEx.Tasks",
+        "Version": "5.1.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.tasks\\5.1.2\\lib\\netstandard2.0\\Nito.AsyncEx.Tasks.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.asyncex.tasks\\5.1.2"
+    },
+    {
+      "Package": {
+        "Id": "Nito.Cancellation",
+        "Version": "1.1.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.cancellation\\1.1.2\\lib\\netstandard2.0\\Nito.Cancellation.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.cancellation\\1.1.2"
+    },
+    {
+      "Package": {
+        "Id": "Nito.Collections.Deque",
+        "Version": "1.1.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.collections.deque\\1.1.1\\lib\\netstandard2.0\\Nito.Collections.Deque.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.collections.deque\\1.1.1"
+    },
+    {
+      "Package": {
+        "Id": "Nito.Disposables",
+        "Version": "2.2.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Foley\\.nuget\\packages\\nito.disposables\\2.2.1\\lib\\netstandard2.1\\Nito.Disposables.dll"
+      ],
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\nito.disposables\\2.2.1"
     },
     {
       "Package": {
@@ -5368,22 +5672,22 @@
     {
       "Package": {
         "Id": "SharpZipLib",
-        "Version": "1.3.3"
+        "Version": "1.4.2"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\sharpziplib\\1.3.3\\lib\\netstandard2.1\\ICSharpCode.SharpZipLib.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\sharpziplib\\1.4.2\\lib\\net6.0\\ICSharpCode.SharpZipLib.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\sharpziplib\\1.3.3"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\sharpziplib\\1.4.2"
     },
     {
       "Package": {
         "Id": "System.Activities.ViewModels",
-        "Version": "1.0.0-20250519.7"
+        "Version": "1.0.0-20251030.4"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20250519.7\\lib\\net6.0-windows7.0\\System.Activities.ViewModels.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20251030.4\\lib\\net6.0-windows7.0\\System.Activities.ViewModels.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20250519.7"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20251030.4"
     },
     {
       "Package": {
@@ -5522,12 +5826,12 @@
     {
       "Package": {
         "Id": "System.Diagnostics.DiagnosticSource",
-        "Version": "8.0.0"
+        "Version": "9.0.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0\\lib\\net8.0\\System.Diagnostics.DiagnosticSource.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.3\\lib\\net8.0\\System.Diagnostics.DiagnosticSource.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.0"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\system.diagnostics.diagnosticsource\\9.0.3"
     },
     {
       "Package": {
@@ -6557,45 +6861,46 @@
     {
       "Package": {
         "Id": "UiPath.Platform",
-        "Version": "25.4.0"
+        "Version": "25.10.1"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.4.0\\lib\\net6.0-windows7.0\\UiPath.Platform.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.10.1\\lib\\net6.0-windows7.0\\UiPath.Platform.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.4.0"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.platform\\25.10.1"
     },
     {
       "Package": {
         "Id": "UiPath.System.Activities",
-        "Version": "25.4.4"
+        "Version": "25.10.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.4.4\\lib\\net6.0-windows7.0\\UiPath.System.Activities.Design.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.4.4\\lib\\net6.0-windows7.0\\UiPath.System.Activities.ViewModels.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.10.3\\lib\\net6.0-windows7.0\\UiPath.System.Activities.Design.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.10.3\\lib\\net6.0-windows7.0\\UiPath.System.Activities.ViewModels.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.4.4"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities\\25.10.3"
     },
     {
       "Package": {
         "Id": "UiPath.System.Activities.Runtime",
-        "Version": "25.4.4"
+        "Version": "25.10.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime\\25.4.4\\lib\\net6.0-windows7.0\\UiPath.System.Activities.Package.Runtime.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime\\25.10.3\\lib\\net6.0-windows7.0\\UiPath.System.Activities.Package.Runtime.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime\\25.4.4"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime\\25.10.3"
     },
     {
       "Package": {
         "Id": "UiPath.System.Activities.Runtime.Windows",
-        "Version": "25.4.4"
+        "Version": "25.10.3"
       },
       "Assemblies": [
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.4.4\\lib\\net6.0-windows7.0\\UiPath.OrchestratorClient.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.4.4\\lib\\net6.0-windows7.0\\UiPath.System.Activities.Api.dll",
-        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.4.4\\lib\\net6.0-windows7.0\\UiPath.System.Activities.dll"
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib\\net6.0-windows7.0\\UiPath.OrchestratorClient.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib\\net6.0-windows7.0\\UiPath.ServiceClients.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib\\net6.0-windows7.0\\UiPath.System.Activities.Api.dll",
+        "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3\\lib\\net6.0-windows7.0\\UiPath.System.Activities.dll"
       ],
-      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.4.4"
+      "Path": "C:\\Users\\Foley\\.nuget\\packages\\uipath.system.activities.runtime.windows\\25.10.3"
     },
     {
       "Package": {
