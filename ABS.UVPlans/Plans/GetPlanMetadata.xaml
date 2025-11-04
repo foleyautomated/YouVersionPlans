@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetPlanMetadata" this:GetPlanMetadata.in_PlanInfoUrl="https://www.bible.com/en/reading-plans/56722-beyond-the-words-encountering-the-god-of-the-bible" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetPlanMetadata" this:GetPlanMetadata.in_PlanInfoUrl="https://www.bible.com/en/reading-plans/59335-fruitfull-love-joy-and-peace-the-foundation-of" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_PlanMetadataJO" Type="OutArgument(njl:JObject)" />
     <x:Property Name="in_PlanInfoUrl" Type="InArgument(x:String)" />
@@ -110,7 +110,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetPlanMetadata" sap:VirtualizedContainerService.HintSize="1276,4224" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetPlanMetadata" sap:VirtualizedContainerService.HintSize="1276,5033" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="url" />
     </Sequence.Variables>
@@ -119,7 +119,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap2010:Annotation.AnnotationText="French Plan 20037:&#xA;https://www.bible.com/fr/reading-plans/20037-how-to-love-people-you-disagree-with&#xA;&#xA;ALSO ACCESSIBLE BY:&#xA;https://www.bible.com/fr/reading-plans/20037&#xA;&#xA;English Plan 20037:&#xA;https://www.bible.com/reading-plans/20037-how-to-love-people-you-disagree-with" DisplayName="Assign - url" sap:VirtualizedContainerService.HintSize="484,350" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap2010:Annotation.AnnotationText="French Plan 20037:&#xA;https://www.bible.com/fr/reading-plans/20037-how-to-love-people-you-disagree-with&#xA;&#xA;ALSO ACCESSIBLE BY:&#xA;https://www.bible.com/fr/reading-plans/20037&#xA;&#xA;English Plan 20037:&#xA;https://www.bible.com/reading-plans/20037-how-to-love-people-you-disagree-with" DisplayName="Assign - url" sap:VirtualizedContainerService.HintSize="553,350" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">url</CSharpReference>
@@ -136,20 +136,20 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="553,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">"GetPlanMetadata.xaml &gt;&gt; Start: " + in_PlanInfoUrl</CSharpValue>
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="PlanInfo Page" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="484,3676" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="True" OpenMode="IfNotOpen" ScopeGuid="727d22c6-3329-4bd5-a1b7-ba8a260f9b7f" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="PlanInfo Page" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="553,4613" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="True" OpenMode="IfNotOpen" ScopeGuid="727d22c6-3329-4bd5-a1b7-ba8a260f9b7f" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,3435" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="519,4395" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="DescriptionParagraph" />
               <Variable x:TypeArguments="ui:UiElement" Name="MoreInfoSVG" />
@@ -170,25 +170,26 @@
               <Variable x:TypeArguments="ui:UiElement" Name="PlanH1" />
               <Variable x:TypeArguments="x:String" Name="PlanName" />
               <Variable x:TypeArguments="x:String" Name="PublisherName" />
+              <Variable x:TypeArguments="x:Boolean" Name="PublisherNameProvided" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="416,115" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Version="V4">
+            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="485,115" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Version="V4">
               <uix:NGoToUrl.Url>
                 <InArgument x:TypeArguments="x:String">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">in_PlanInfoUrl</CSharpValue>
                 </InArgument>
               </uix:NGoToUrl.Url>
             </uix:NGoToUrl>
-            <Delay sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="Delay_1">
+            <Delay sap:VirtualizedContainerService.HintSize="485,123" sap2010:WorkflowViewState.IdRef="Delay_1">
               <InArgument x:TypeArguments="x:TimeSpan">
                 <CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">TimeSpan.FromSeconds(1)</CSharpValue>
               </InArgument>
             </Delay>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find PlanSplashImage" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find PlanSplashImage" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">SplashImage</CSharpReference>
@@ -208,7 +209,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WaitUiElementAppear>
-            <Assign DisplayName="SplashImageUrl" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_12">
+            <Assign DisplayName="SplashImageUrl" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="Assign_12">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">SplashImageUrl</CSharpReference>
@@ -226,7 +227,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <uix:NHighlight Color="Gold" DisplayName="Highlight" HealingAgentBehavior="SameAsCard" HighlightTime="0.5" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NHighlight_1" ScopeIdentifier="727d22c6-3329-4bd5-a1b7-ba8a260f9b7f" Version="V4">
+            <uix:NHighlight Color="Gold" DisplayName="Highlight" HealingAgentBehavior="SameAsCard" HighlightTime="0.5" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="NHighlight_1" ScopeIdentifier="727d22c6-3329-4bd5-a1b7-ba8a260f9b7f" Version="V4">
               <uix:NHighlight.InUiElement>
                 <InArgument x:TypeArguments="ui:UiElement">
                   <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">SplashImage</CSharpValue>
@@ -239,7 +240,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NHighlight>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'H1'" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'H1'" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">PlanH1</CSharpReference>
@@ -259,7 +260,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WaitUiElementAppear>
-            <Assign DisplayName="PlanName" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Assign_13">
+            <Assign DisplayName="PlanName" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="Assign_13">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">PlanName</CSharpReference>
@@ -277,14 +278,14 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Load this first so that we feel confidant the rest of the page is already loaded too" DisplayName="Find Element 'P'" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="Load this first so that we feel confidant the rest of the page is already loaded too" DisplayName="Find Element 'P'" sap:VirtualizedContainerService.HintSize="485,184" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">MoreInfoSVG</CSharpReference>
                 </OutArgument>
               </ui:WaitUiElementAppear.FoundElement>
               <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="914e2313-e42f-4c55-96fc-ed040fd3077f" InformativeScreenshot="8c98a00906664c109249950cbcb97cc0" Selector="&lt;webctrl parentid='__next' tag='DIV' class='flex' /&gt;&lt;webctrl href='*/organizations/*' /&gt;&lt;webctrl tag='svg' /&gt;" WaitForReady="COMPLETE">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="914e2313-e42f-4c55-96fc-ed040fd3077f" InformativeScreenshot="8c98a00906664c109249950cbcb97cc0" Selector="&lt;webctrl parentid='__next' tag='DIV' class='flex' /&gt;&lt;webctrl tag='A' class='*hover:shadow*rounded-*' /&gt;&lt;webctrl tag='svg' /&gt;" WaitForReady="COMPLETE">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -293,12 +294,12 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:WaitUiElementAppear>
-            <ui:GetAncestor DisplayName="Get Ancestor - MoreInfoDiv" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GetAncestor_1" UpLevels="2">
+            <ui:GetAncestor DisplayName="Get Ancestor - MoreInfoDiv" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="GetAncestor_1" UpLevels="2">
               <ui:GetAncestor.Ancestor>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">MoreInfoDiv</CSharpReference>
@@ -323,7 +324,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetAncestor>
-            <ui:GetAncestor DisplayName="Get Ancestor - MoreInfoLink" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GetAncestor_2" UpLevels="1">
+            <ui:GetAncestor DisplayName="Get Ancestor - MoreInfoLink" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="GetAncestor_2" UpLevels="1">
               <ui:GetAncestor.Ancestor>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">MoreInfoLink</CSharpReference>
@@ -348,7 +349,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:GetAncestor>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLanguageCodeFromUrl" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Util\\GetLanguageCodeFromUrl.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLanguageCodeFromUrl" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Util\\GetLanguageCodeFromUrl.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <OutArgument x:TypeArguments="x:String" x:Key="out_LanguageCode">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">LanguageCode</CSharpReference>
@@ -364,39 +365,19 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeWorkflowFile>
-            <Assign DisplayName="PublisherName (With 'More From')" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign DisplayName="PublisherNameProvided" sap:VirtualizedContainerService.HintSize="485,175" sap2010:WorkflowViewState.IdRef="Assign_14">
               <Assign.To>
-                <OutArgument x:TypeArguments="x:String">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">PublisherNameWithMoreFrom</CSharpReference>
+                <OutArgument x:TypeArguments="x:Boolean">
+                  <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">PublisherNameProvided</CSharpReference>
                 </OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">MoreInfoDiv.Get("innertext", false).ToString()</CSharpValue>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">MoreInfoLink.Get("href", false).ToString().Contains("/organizations/")</CSharpValue>
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="StripPublisherNameMoreFrom" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Util\\StripPublisherNameMoreFrom.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <OutArgument x:TypeArguments="x:String" x:Key="out_PublisherName">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">PublisherName</CSharpReference>
-                </OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_LanguageCode">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">LanguageCode</CSharpValue>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="in_PublisherNameWithMoreFrom">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">PublisherNameWithMoreFrom</CSharpValue>
-                </InArgument>
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
-            <ui:LogMessage DisplayName="Log PublisherName" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
-              <ui:LogMessage.Message>
-                <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">"PublisherName: " + PublisherName</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Message>
-            </ui:LogMessage>
-            <Assign DisplayName="PublisherUrl" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign DisplayName="PublisherUrl" sap:VirtualizedContainerService.HintSize="485,175" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">PublisherUrl</CSharpReference>
@@ -404,18 +385,99 @@
               </Assign.To>
               <Assign.Value>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">GlobalVariablesNamespace.GlobalVariables.UV_BASE_URL + MoreInfoLink.Get("href", false).ToString()</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">( PublisherNameProvided ? GlobalVariablesNamespace.GlobalVariables.UV_BASE_URL : "") + MoreInfoLink.Get("href", false).ToString()</CSharpValue>
                 </InArgument>
               </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </Assign>
-            <ui:LogMessage DisplayName="Log PublisherUrl" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
+            <ui:LogMessage DisplayName="Log PublisherUrl" sap:VirtualizedContainerService.HintSize="485,57" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">"PublisherUrl: " + PublisherUrl</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - PlanIntroP" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+            <If sap:VirtualizedContainerService.HintSize="485,768" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">PublisherNameProvided</CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,403" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="PublisherName (With 'More From')" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">PublisherNameWithMoreFrom</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">MoreInfoDiv.Get("innertext", false).ToString()</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="StripPublisherNameMoreFrom" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Util\\StripPublisherNameMoreFrom.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_PublisherName">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">PublisherName</CSharpReference>
+                      </OutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_LanguageCode">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">LanguageCode</CSharpValue>
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_PublisherNameWithMoreFrom">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">PublisherNameWithMoreFrom</CSharpValue>
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="Default to Empt7" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_15">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">PublisherName</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">""</CSharpValue>
+                      </InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:LogMessage DisplayName="Log PublisherName" sap:VirtualizedContainerService.HintSize="485,177" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace">
+              <ui:LogMessage.Message>
+                <InArgument x:TypeArguments="x:Object">
+                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">"PublisherName: " + PublisherName</CSharpValue>
+                </InArgument>
+              </ui:LogMessage.Message>
+            </ui:LogMessage>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - PlanIntroP" sap:VirtualizedContainerService.HintSize="485,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">PlanIntroP</CSharpReference>
@@ -432,7 +494,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <Assign DisplayName="PlanIntroText" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign DisplayName="PlanIntroText" sap:VirtualizedContainerService.HintSize="485,175" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">PlanIntroText</CSharpReference>
@@ -444,14 +506,14 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log - PlanIntroText" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace">
+            <ui:LogMessage DisplayName="Log - PlanIntroText" sap:VirtualizedContainerService.HintSize="485,177" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">"PlanIntroText: " + PlanIntroText</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - PlanIntroP" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element - PlanIntroP" sap:VirtualizedContainerService.HintSize="485,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">PlanThankYouP</CSharpReference>
@@ -468,7 +530,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <Assign DisplayName="Plan Thank You Text" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign DisplayName="Plan Thank You Text" sap:VirtualizedContainerService.HintSize="485,175" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">PlanThankYouText</CSharpReference>
@@ -480,7 +542,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find PlanDurationP" sap:VirtualizedContainerService.HintSize="416,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find PlanDurationP" sap:VirtualizedContainerService.HintSize="485,139" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5">
               <ui:WaitUiElementAppear.FoundElement>
                 <OutArgument x:TypeArguments="ui:UiElement">
                   <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">DurationP</CSharpReference>
@@ -497,7 +559,7 @@
                 </ui:Target>
               </ui:WaitUiElementAppear.Target>
             </ui:WaitUiElementAppear>
-            <Assign DisplayName="PlanDuration" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign DisplayName="PlanDuration" sap:VirtualizedContainerService.HintSize="485,175" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">PlanDuration</CSharpReference>
@@ -509,7 +571,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="PlanId" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign DisplayName="PlanId" sap:VirtualizedContainerService.HintSize="485,175" sap2010:WorkflowViewState.IdRef="Assign_8">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">PlanId</CSharpReference>
@@ -521,114 +583,7 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:IfElseIfV2 DisplayName="Else If - Validate Captured Items" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
-              <ui:IfElseIfV2.Condition>
-                <InArgument x:TypeArguments="x:Boolean">
-                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">PlanIntroText.Length &lt; 20</CSharpValue>
-                </InArgument>
-              </ui:IfElseIfV2.Condition>
-              <ui:IfElseIfV2.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </Sequence>
-              </ui:IfElseIfV2.Else>
-              <ui:IfElseIfV2.ElseIfs>
-                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_2">
-                    <ui:IfElseIfBlock.Condition>
-                      <InArgument x:TypeArguments="x:Boolean">
-                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">!PublisherUrl.Contains("organization")</CSharpValue>
-                      </InArgument>
-                    </ui:IfElseIfBlock.Condition>
-                    <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Throw DisplayName="Throw - Missing Publisher URL" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_2">
-                          <InArgument x:TypeArguments="s:Exception">
-                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">new ValidationException("Publisher URL at '" + in_PlanInfoUrl + "' was doesn't actually point to an organization: " + PublisherUrl)</CSharpValue>
-                          </InArgument>
-                        </Throw>
-                      </Sequence>
-                    </ui:IfElseIfBlock.Then>
-                  </ui:IfElseIfBlock>
-                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
-                    <ui:IfElseIfBlock.Condition>
-                      <InArgument x:TypeArguments="x:Boolean">
-                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">PublisherNameWithMoreFrom.Length &lt; 2</CSharpValue>
-                      </InArgument>
-                    </ui:IfElseIfBlock.Condition>
-                    <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Throw DisplayName="Throw - Missing Publisher Name" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_3">
-                          <InArgument x:TypeArguments="s:Exception">
-                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">new ValidationException("Publisher Name at '" + in_PlanInfoUrl + "' is empty or doesnt look like a real name: '" + PublisherNameWithMoreFrom + "'")</CSharpValue>
-                          </InArgument>
-                        </Throw>
-                      </Sequence>
-                    </ui:IfElseIfBlock.Then>
-                  </ui:IfElseIfBlock>
-                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_6">
-                    <ui:IfElseIfBlock.Condition>
-                      <InArgument x:TypeArguments="x:Boolean">
-                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">!(PlanDuration.All(char.IsDigit) &amp;&amp; PlanId.All(char.IsDigit))</CSharpValue>
-                      </InArgument>
-                    </ui:IfElseIfBlock.Condition>
-                    <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,174.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <Throw DisplayName="Throw - Invalid PlanId or PlanDuration" sap:VirtualizedContainerService.HintSize="450,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_4">
-                          <InArgument x:TypeArguments="s:Exception">
-                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32" xml:space="preserve">new ValidationException("PlanId and PlanDuration must be digits. PlanId: [" +  PlanId + "], PlanDuration: [" + PlanDuration + "]")</CSharpValue>
-                          </InArgument>
-                        </Throw>
-                      </Sequence>
-                    </ui:IfElseIfBlock.Then>
-                  </ui:IfElseIfBlock>
-                </sc:BindingList>
-              </ui:IfElseIfV2.ElseIfs>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:IfElseIfV2.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Throw DisplayName="Throw - Missing Intro" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1">
-                    <InArgument x:TypeArguments="s:Exception">
-                      <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">new ValidationException("Plan Intro at '" + in_PlanInfoUrl + "' was too short: " + PlanIntroText)</CSharpValue>
-                    </InArgument>
-                  </Throw>
-                </Sequence>
-              </ui:IfElseIfV2.Then>
-            </ui:IfElseIfV2>
-            <Assign DisplayName="PlanMetadataJO" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign DisplayName="PlanMetadataJO" sap:VirtualizedContainerService.HintSize="485,175" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="njl:JObject">
                   <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">out_PlanMetadataJO</CSharpReference>
@@ -651,13 +606,98 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log out_PlanMetadataJO" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
+            <ui:LogMessage DisplayName="Log out_PlanMetadataJO" sap:VirtualizedContainerService.HintSize="485,177" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">out_PlanMetadataJO.ToString()</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
+            <ui:IfElseIfV2 DisplayName="Else If - Validate Captured Items" sap:VirtualizedContainerService.HintSize="485,457" sap2010:WorkflowViewState.IdRef="IfElseIfV2_1">
+              <ui:IfElseIfV2.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">PlanIntroText.Length &lt; 20</CSharpValue>
+                </InArgument>
+              </ui:IfElseIfV2.Condition>
+              <ui:IfElseIfV2.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="483,25" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </ui:IfElseIfV2.Else>
+              <ui:IfElseIfV2.ElseIfs>
+                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_4">
+                    <ui:IfElseIfBlock.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">PublisherName.Length &lt; 2 &amp;&amp; PublisherNameProvided</CSharpValue>
+                      </InArgument>
+                    </ui:IfElseIfBlock.Condition>
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="483,174" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw - Missing Publisher Name" sap:VirtualizedContainerService.HintSize="449,114" sap2010:WorkflowViewState.IdRef="Throw_3">
+                          <InArgument x:TypeArguments="s:Exception">
+                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">new ValidationException("Publisher Name at '" + in_PlanInfoUrl + "' is empty or doesnt look like a real name: '" + PublisherNameWithMoreFrom + "'")</CSharpValue>
+                          </InArgument>
+                        </Throw>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                  <ui:IfElseIfBlock BlockType="ElseIf" DisplayName="If else if block" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_6">
+                    <ui:IfElseIfBlock.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">!(PlanDuration.All(char.IsDigit) &amp;&amp; PlanId.All(char.IsDigit))</CSharpValue>
+                      </InArgument>
+                    </ui:IfElseIfBlock.Condition>
+                    <ui:IfElseIfBlock.Then>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="483,174" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw DisplayName="Throw - Invalid PlanId or PlanDuration" sap:VirtualizedContainerService.HintSize="449,114" sap2010:WorkflowViewState.IdRef="Throw_4">
+                          <InArgument x:TypeArguments="s:Exception">
+                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32" xml:space="preserve">new ValidationException("PlanId and PlanDuration must be digits. PlanId: [" +  PlanId + "], PlanDuration: [" + PlanDuration + "]")</CSharpValue>
+                          </InArgument>
+                        </Throw>
+                      </Sequence>
+                    </ui:IfElseIfBlock.Then>
+                  </ui:IfElseIfBlock>
+                </sc:BindingList>
+              </ui:IfElseIfV2.ElseIfs>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:IfElseIfV2.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="483,25" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw - Missing Intro" sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_1">
+                    <InArgument x:TypeArguments="s:Exception">
+                      <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">new ValidationException("Plan Intro at '" + in_PlanInfoUrl + "' was too short: " + PlanIntroText)</CSharpValue>
+                    </InArgument>
+                  </Throw>
+                </Sequence>
+              </ui:IfElseIfV2.Then>
+            </ui:IfElseIfV2>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
