@@ -1,0 +1,352 @@
+[
+  {
+    "LanguageName": "Español (Latinoamérica)",
+    "TranslatedLanguageName": "Spanish (Latin America)",
+    "LanguageCode": "es"
+  },
+  {
+    "LanguageName": "Afrikaans (South Africa)",
+    "TranslatedLanguageName": "",
+    "LanguageCode": "af"
+  },
+  {
+    "LanguageName": "Shqip",
+    "TranslatedLanguageName": "Albanian",
+    "LanguageCode": "sq"
+  },
+  {
+    "LanguageName": "አማርኛ",
+    "TranslatedLanguageName": "Amharic",
+    "LanguageCode": "am"
+  },
+  {
+    "LanguageName": "العربية",
+    "TranslatedLanguageName": "Arabic",
+    "LanguageCode": "ar"
+  },
+  {
+    "LanguageName": "հայերեն",
+    "TranslatedLanguageName": "Armenian",
+    "LanguageCode": "hy"
+  },
+  {
+    "LanguageName": "Беларуская",
+    "TranslatedLanguageName": "Belarusian",
+    "LanguageCode": "be"
+  },
+  {
+    "LanguageName": "Български",
+    "TranslatedLanguageName": "Bulgarian",
+    "LanguageCode": "bg"
+  },
+  {
+    "LanguageName": "Català",
+    "TranslatedLanguageName": "Catalan",
+    "LanguageCode": "ca"
+  },
+  {
+    "LanguageName": "繁體中文（香港）",
+    "TranslatedLanguageName": "Chinese Hong Kong",
+    "LanguageCode": "zh-HK"
+  },
+  {
+    "LanguageName": "简体中文",
+    "TranslatedLanguageName": "Chinese Simplified",
+    "LanguageCode": "zh-CN"
+  },
+  {
+    "LanguageName": "繁體中文",
+    "TranslatedLanguageName": "Chinese Traditional",
+    "LanguageCode": "zh-HK"
+  },
+  {
+    "LanguageName": "Hrvatski",
+    "TranslatedLanguageName": "Croatian",
+    "LanguageCode": "hr"
+  },
+  {
+    "LanguageName": "Čeština",
+    "TranslatedLanguageName": "Czech",
+    "LanguageCode": "cs"
+  },
+  {
+    "LanguageName": "Dansk",
+    "TranslatedLanguageName": "Danish",
+    "LanguageCode": "da"
+  },
+  {
+    "LanguageName": "Nederlands (Nederland)",
+    "TranslatedLanguageName": "Dutch (Netherlands)",
+    "LanguageCode": "nl"
+  },
+  {
+    "LanguageName": "English (UK)",
+    "TranslatedLanguageName": "",
+    "LanguageCode": "en-GB"
+  },
+  {
+    "LanguageName": "English (US)",
+    "TranslatedLanguageName": "",
+    "LanguageCode": "en"
+  },
+  {
+    "LanguageName": "فارسی",
+    "TranslatedLanguageName": "Farsi",
+    "LanguageCode": "fa"
+  },
+  {
+    "LanguageName": "Filipino",
+    "TranslatedLanguageName": "",
+    "LanguageCode": "tl"
+  },
+  {
+    "LanguageName": "Suomi",
+    "TranslatedLanguageName": "Finnish",
+    "LanguageCode": "fi"
+  },
+  {
+    "LanguageName": "Français (France)",
+    "TranslatedLanguageName": "French (France)",
+    "LanguageCode": "fr"
+  },
+  {
+    "LanguageName": "Deutsch (Deutschland)",
+    "TranslatedLanguageName": "German (Germany)",
+    "LanguageCode": "de"
+  },
+  {
+    "LanguageName": "Ελληνικά",
+    "TranslatedLanguageName": "Greek (Greece)",
+    "LanguageCode": "el"
+  },
+  {
+    "LanguageName": "Kreyòl Ayisyen",
+    "TranslatedLanguageName": "Haitian Creole",
+    "LanguageCode": "ht"
+  },
+  {
+    "LanguageName": "עִברִית",
+    "TranslatedLanguageName": "Hebrew",
+    "LanguageCode": "he"
+  },
+  {
+    "LanguageName": "हिन्दी",
+    "TranslatedLanguageName": "Hindi",
+    "LanguageCode": "hi"
+  },
+  {
+    "LanguageName": "Magyar",
+    "TranslatedLanguageName": "Hungarian",
+    "LanguageCode": "hu"
+  },
+  {
+    "LanguageName": "Ásụ̀sụ́ Ìgbò",
+    "TranslatedLanguageName": "Igbo",
+    "LanguageCode": "ig"
+  },
+  {
+    "LanguageName": "Bahasa Indonesia",
+    "TranslatedLanguageName": "Indonesian",
+    "LanguageCode": "id"
+  },
+  {
+    "LanguageName": "Italiano",
+    "TranslatedLanguageName": "Italian",
+    "LanguageCode": "it"
+  },
+  {
+    "LanguageName": "日本語",
+    "TranslatedLanguageName": "Japanese",
+    "LanguageCode": "ja"
+  },
+  {
+    "LanguageName": "ភាសាខ្មែរ",
+    "TranslatedLanguageName": "Khmer",
+    "LanguageCode": "km"
+  },
+  {
+    "LanguageName": "한국어",
+    "TranslatedLanguageName": "Korean",
+    "LanguageCode": "ko"
+  },
+  {
+    "LanguageName": "سۆرانی، کوردیی ناوەندی",
+    "TranslatedLanguageName": "Kurdish-Sorani",
+    "LanguageCode": "ckb"
+  },
+  {
+    "LanguageName": "Latviešu",
+    "TranslatedLanguageName": "Latvian",
+    "LanguageCode": "lv"
+  },
+  {
+    "LanguageName": "Lingála",
+    "TranslatedLanguageName": "Lingala",
+    "LanguageCode": "ln"
+  },
+  {
+    "LanguageName": "Lietuvių",
+    "TranslatedLanguageName": "Lithuanian",
+    "LanguageCode": "lt"
+  },
+  {
+    "LanguageName": "Македонски",
+    "TranslatedLanguageName": "Macedonian",
+    "LanguageCode": "mk"
+  },
+  {
+    "LanguageName": "Malagasy",
+    "TranslatedLanguageName": "",
+    "LanguageCode": "mg"
+  },
+  {
+    "LanguageName": "Bahasa Melayu",
+    "TranslatedLanguageName": "Malay",
+    "LanguageCode": "ms"
+  },
+  {
+    "LanguageName": "മലയാളം",
+    "TranslatedLanguageName": "Malayalam",
+    "LanguageCode": "ml"
+  },
+  {
+    "LanguageName": "मराठी",
+    "TranslatedLanguageName": "Marathi",
+    "LanguageCode": "mr"
+  },
+  {
+    "LanguageName": "Монгол",
+    "TranslatedLanguageName": "Mongolian",
+    "LanguageCode": "mn"
+  },
+  {
+    "LanguageName": "မြန်မာယူနီကုတ်",
+    "TranslatedLanguageName": "Myanmar Burmese (Unicode)",
+    "LanguageCode": "my"
+  },
+  {
+    "LanguageName": "ျမန္မာေဇာ္ဂ်ီာ",
+    "TranslatedLanguageName": "Myanmar Burmese (Zawgyi)",
+    "LanguageCode": "my-MM"
+  },
+  {
+    "LanguageName": "नेपाली भाषा",
+    "TranslatedLanguageName": "Nepali",
+    "LanguageCode": "ne"
+  },
+  {
+    "LanguageName": "Norsk",
+    "TranslatedLanguageName": "Norweigan",
+    "LanguageCode": "no"
+  },
+  {
+    "LanguageName": "Polski",
+    "TranslatedLanguageName": "Polish",
+    "LanguageCode": "pl"
+  },
+  {
+    "LanguageName": "Português (Brasil)",
+    "TranslatedLanguageName": "Portuguese (Brazil)",
+    "LanguageCode": "pt"
+  },
+  {
+    "LanguageName": "Português (Portugal)",
+    "TranslatedLanguageName": "Portuguese (Portugal)",
+    "LanguageCode": "pt-PT"
+  },
+  {
+    "LanguageName": "Română",
+    "TranslatedLanguageName": "Romanian",
+    "LanguageCode": "ro"
+  },
+  {
+    "LanguageName": "Русский",
+    "TranslatedLanguageName": "Russian",
+    "LanguageCode": "ru"
+  },
+  {
+    "LanguageName": "Српски Srpski",
+    "TranslatedLanguageName": "Serbian (Latin)",
+    "LanguageCode": "sr"
+  },
+  {
+    "LanguageName": "chiShona",
+    "TranslatedLanguageName": "Shona",
+    "LanguageCode": "sn"
+  },
+  {
+    "LanguageName": "Slovenčina (Slovakia)",
+    "TranslatedLanguageName": "Slovak (Slovakia)",
+    "LanguageCode": "sk"
+  },
+  {
+    "LanguageName": "Español (España)",
+    "TranslatedLanguageName": "Spanish (Spain)",
+    "LanguageCode": "es-ES"
+  },
+  {
+    "LanguageName": "Kiswahili",
+    "TranslatedLanguageName": "Swahili",
+    "LanguageCode": "sw"
+  },
+  {
+    "LanguageName": "Svenska",
+    "TranslatedLanguageName": "Swedish",
+    "LanguageCode": "sv"
+  },
+  {
+    "LanguageName": "தமிழ்",
+    "TranslatedLanguageName": "Tamil",
+    "LanguageCode": "ta"
+  },
+  {
+    "LanguageName": "తెలుగు",
+    "TranslatedLanguageName": "Telugu",
+    "LanguageCode": "te"
+  },
+  {
+    "LanguageName": "ภาษาไทย (ประเทศไทย)",
+    "TranslatedLanguageName": "Thai (Thailand)",
+    "LanguageCode": "th"
+  },
+  {
+    "LanguageName": "Türkçe",
+    "TranslatedLanguageName": "Turkish",
+    "LanguageCode": "tr"
+  },
+  {
+    "LanguageName": "Українська",
+    "TranslatedLanguageName": "Ukrainian",
+    "LanguageCode": "uk"
+  },
+  {
+    "LanguageName": "اردو",
+    "TranslatedLanguageName": "Urdu",
+    "LanguageCode": "ur"
+  },
+  {
+    "LanguageName": "Tiếng Việt",
+    "TranslatedLanguageName": "Vietnamese",
+    "LanguageCode": "vi"
+  },
+  {
+    "LanguageName": "Cymraeg",
+    "TranslatedLanguageName": "Welsh",
+    "LanguageCode": "cy"
+  },
+  {
+    "LanguageName": "isiXhosa",
+    "TranslatedLanguageName": "Xhosa",
+    "LanguageCode": "xh"
+  },
+  {
+    "LanguageName": "Yorùbá",
+    "TranslatedLanguageName": "Yoruba",
+    "LanguageCode": "yo"
+  },
+  {
+    "LanguageName": "Zulu",
+    "TranslatedLanguageName": "",
+    "LanguageCode": "zu"
+  }
+]

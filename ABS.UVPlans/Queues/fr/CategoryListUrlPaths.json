@@ -1,0 +1,82 @@
+[
+  {
+    "CategoryName": "Amour",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/2727-love",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Anxiété",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/828-anxiety",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Guérison",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/844-healing",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Colère",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/3412-anger",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Espoir",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/2541-hope",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Dépression",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/3755-depression",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Peur",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/3874-fear",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Paix",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/2739-peace",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Stress",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/882-stress",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Patience",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/898-patience",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Perte",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/3980-loss",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Jalousie",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/18217-jealousy",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Joie",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/923-joy",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Tentation",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/4020-temptation",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Orgueil",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/3841-pride",
+    "CategoryLanguageCode": "fr"
+  },
+  {
+    "CategoryName": "Doute",
+    "CategoryListUrl": "https://www.bible.com/fr/reading-plans-collection/3161-doubt",
+    "CategoryLanguageCode": "fr"
+  }
+]

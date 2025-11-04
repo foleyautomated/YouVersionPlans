@@ -1,0 +1,17 @@
+﻿{
+  "Name": "LanguageSelector",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "VmIMgpIBsE2acIrrlCBj6g",
+  "Reference": "UrhlpJTAA0mM_0uS1fnqrw/VmIMgpIBsE2acIrrlCBj6g",
+  "ParentRef": "UrhlpJTAA0mM_0uS1fnqrw/81tL_Bb93UuQ_sV7fJ7xFQ",
+  "Created": "2025-11-04T17:21:01.6965562Z",
+  "Updated": "2025-11-04T17:21:16.583689Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.4.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dX2xEoVLt0WHE78Xz7QJfg" Reference="UrhlpJTAA0mM_0uS1fnqrw/VmIMgpIBsE2acIrrlCBj6g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="bible.com/reading-plans" CVScreenId="9051cd9c-6509-466e-816a-69fccb9f3663" CvElementArea="2632, 389, 39, 39" CvType="Icon" DesignTimeRectangle="2638, 397, 27, 27" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentname='Language Selector' tag='path' /&gt;" Guid="1aaaf3dd-f6bb-43b7-9715-c2e288701c63" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHBSURBVFhHxZaNrcJADIOZgUlYpJN0EhZhESZhkj4ZyZX7NekV6SEsRaBeL06cH7gsP8SFD87g9Xotj8djud/v70/Z8/nka0OcJhfhPM/L9Xpt7Xa7vd85G8iQXKTTNO2IRqZAdPcIh+SSk04/MQWg0nRoyXWJzvSMz0Xg75Kc575XoSRXzUhgCZPMzZbvCXo33+sC2JGTWPU2WAZBRPnMzcYGVTBsxB15NlcSC+lM342UOu+wWelvQ86sGWmeZSdn9pa+OqPPDXmXmcDAiKwxg06/mf2GPJ1zRrPeDExIeUneKbOSjzLL6KvOzbpX51VwKzlHxjNtY+PwnJ3Nc45oS/5tszIrecr2bTvMfCSb12jaqCyHsmfDcVaFVMayJUYNmeSepJX8aBkIGRw3lZDkzsygb2Mz5ykdZ7mbVaPKzOiWV7teqx+CjD7PuswE7o92vQqZPTPslOky4x2Wa0fOLDIAKmN0ez2JeSbsyAUuHDl3HdMh/0zIBP6UVsRCSS5w6SgASco1Sll5T8ZSGC25UDn61Dh2iUNyoZLwjFXTQgzJDTlKyStzGUakxmlyQ0rIuZtNpdHnWcLEx+T/iZ+S/wEPU5/56yz0yAAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bible Reading Plans &amp;amp; Daily Devotionals | YouVersion Bible' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Complete">
+      <imageRef attrName="InformativeScreenshot" originalValue="673f9a510b8fe5024043a80a9a77a3e5.png" xmlns="">0xAA0ZTNQAkaVkf20mZCQIA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

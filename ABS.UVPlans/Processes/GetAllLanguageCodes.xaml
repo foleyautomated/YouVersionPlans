@@ -1,0 +1,577 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetAllLanguageCodes" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_LanguagesJA" Type="OutArgument(njl:JArray)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetAllLanguageCodes" sap:VirtualizedContainerService.HintSize="1332,5490" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="url">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://www.bible.com/reading-plans</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="njl:JArray" Name="LanguageButtonsJA" />
+      <Variable x:TypeArguments="x:String" Name="LanguageCodesFile">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">Queues/LanguageCodes.json</Literal>
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="556,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="njl:JArray">
+          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">LanguageButtonsJA</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="njl:JArray">
+          <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">new JArray()</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Any UV Page" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="556,5290.666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d91cf1ea-b383-42df-a050-0ed4d11361ac" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="522,5048.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:UiElement" Name="ChooseYourLanguageModal" />
+              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="AllLanguageButtons" />
+              <Variable x:TypeArguments="x:Int32" Name="lanIndex" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'LanguageSelector'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d91cf1ea-b383-42df-a050-0ed4d11361ac" Timeout="3" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="bible.com/reading-plans" CVScreenId="9051cd9c-6509-466e-816a-69fccb9f3663" ContentHash="dX2xEoVLt0WHE78Xz7QJfg" CvElementArea="2632, 389, 39, 39" CvType="Icon" DesignTimeRectangle="2638, 397, 27, 27" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentname='Language Selector' tag='path' /&gt;" Guid="1aaaf3dd-f6bb-43b7-9715-c2e288701c63" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHBSURBVFhHxZaNrcJADIOZgUlYpJN0EhZhESZhkj4ZyZX7NekV6SEsRaBeL06cH7gsP8SFD87g9Xotj8djud/v70/Z8/nka0OcJhfhPM/L9Xpt7Xa7vd85G8iQXKTTNO2IRqZAdPcIh+SSk04/MQWg0nRoyXWJzvSMz0Xg75Kc575XoSRXzUhgCZPMzZbvCXo33+sC2JGTWPU2WAZBRPnMzcYGVTBsxB15NlcSC+lM342UOu+wWelvQ86sGWmeZSdn9pa+OqPPDXmXmcDAiKwxg06/mf2GPJ1zRrPeDExIeUneKbOSjzLL6KvOzbpX51VwKzlHxjNtY+PwnJ3Nc45oS/5tszIrecr2bTvMfCSb12jaqCyHsmfDcVaFVMayJUYNmeSepJX8aBkIGRw3lZDkzsygb2Mz5ykdZ7mbVaPKzOiWV7teqx+CjD7PuswE7o92vQqZPTPslOky4x2Wa0fOLDIAKmN0ez2JeSbsyAUuHDl3HdMh/0zIBP6UVsRCSS5w6SgASco1Sll5T8ZSGC25UDn61Dh2iUNyoZLwjFXTQgzJDTlKyStzGUakxmlyQ0rIuZtNpdHnWcLEx+T/iZ+S/wEPU5/56yz0yAAAAABJRU5ErkJggg==" InformativeScreenshot="673f9a510b8fe5024043a80a9a77a3e5.png" Reference="UrhlpJTAA0mM_0uS1fnqrw/VmIMgpIBsE2acIrrlCBj6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bible Reading Plans &amp;amp; Daily Devotionals | YouVersion Bible' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" sap:VirtualizedContainerService.HintSize="488,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+              <ui:WaitUiElementAppear.FoundElement>
+                <OutArgument x:TypeArguments="ui:UiElement">
+                  <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">ChooseYourLanguageModal</CSharpReference>
+                </OutArgument>
+              </ui:WaitUiElementAppear.FoundElement>
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d6671f85-f9a8-4778-a91f-ffb12c58b23f" InformativeScreenshot="c45009ebd3eb00192f70e2c0cb111463" Selector="&lt;webctrl tag='DIV' class='overflow-y-auto' /&gt;&lt;webctrl tag='DIV' class='*grid*grid*' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <ui:FindChildren DisplayName="Find Children - Buttons" Filter="&lt;webctrl tag='BUTTON'/&gt;" sap:VirtualizedContainerService.HintSize="488,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
+              <ui:FindChildren.Children>
+                <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
+                  <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">AllLanguageButtons</CSharpReference>
+                </OutArgument>
+              </ui:FindChildren.Children>
+              <ui:FindChildren.Target>
+                <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="9c7f74b4-14e8-4a7c-8150-7812e7f77c76" TimeoutMS="3000">
+                  <ui:Target.Element>
+                    <InArgument x:TypeArguments="ui:UiElement">
+                      <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">ChooseYourLanguageModal</CSharpValue>
+                    </InArgument>
+                  </ui:Target.Element>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:FindChildren.Target>
+            </ui:FindChildren>
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each lang btn" sap:VirtualizedContainerService.HintSize="488,1208.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="ui:UiElement">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="btn" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1076.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="LanguageLables" />
+                      <Variable x:TypeArguments="x:String" Name="LanguageName" />
+                      <Variable x:TypeArguments="x:String" Name="TranslatedLanguageName" />
+                      <Variable x:TypeArguments="x:String" Name="LanUrl" />
+                      <Variable x:TypeArguments="x:String" Name="LanguageCode" />
+                      <Variable x:TypeArguments="njl:JObject" Name="LanJO" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:FindChildren DisplayName="Find Children - LanguageLables" Filter="&lt;webctrl tag='DIV'/&gt;" sap:VirtualizedContainerService.HintSize="416,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+                      <ui:FindChildren.Children>
+                        <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
+                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">LanguageLables</CSharpReference>
+                        </OutArgument>
+                      </ui:FindChildren.Children>
+                      <ui:FindChildren.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="9bcff734-9e93-47cf-91f3-da95eb03115b">
+                          <ui:Target.Element>
+                            <InArgument x:TypeArguments="ui:UiElement">
+                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">btn</CSharpValue>
+                            </InArgument>
+                          </ui:Target.Element>
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:FindChildren.Target>
+                    </ui:FindChildren>
+                    <Assign DisplayName="Language Name" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">LanguageName</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">LanguageLables.First().Get("innertext", false).ToString()</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Translated Language Name" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">TranslatedLanguageName</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">LanguageLables.Count() &gt; 1 ? LanguageLables.Last().Get("innertext", false).ToString() : ""</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="LanJO" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="njl:JObject">
+                          <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">LanJO</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="njl:JObject">
+                          <CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18" xml:space="preserve">new JObject {
+	{"LanguageName", LanguageName},
+	{"TranslatedLanguageName", TranslatedLanguageName},
+}</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">LanJO.ToString()</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_JA.Add(in_JO);" DisplayName="Invoke Code - Add JO" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                      <ui:InvokeCode.Arguments>
+                        <InArgument x:TypeArguments="njl:JObject" x:Key="in_JO">
+                          <CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">LanJO</CSharpValue>
+                        </InArgument>
+                        <InOutArgument x:TypeArguments="njl:JArray" x:Key="io_JA">
+                          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">LanguageButtonsJA</CSharpReference>
+                        </InOutArgument>
+                      </ui:InvokeCode.Arguments>
+                    </ui:InvokeCode>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <ui:ForEach.Values>
+                <InArgument x:TypeArguments="sc:IEnumerable">
+                  <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">AllLanguageButtons</CSharpValue>
+                </InArgument>
+              </ui:ForEach.Values>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,253.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V4">
+              <uix:NKeyboardShortcuts.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NKeyboardShortcuts.VerifyOptions>
+            </uix:NKeyboardShortcuts>
+            <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_13">
+              <Assign.To>
+                <OutArgument x:TypeArguments="njl:JArray">
+                  <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">out_LanguagesJA</CSharpReference>
+                </OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="njl:JArray">
+                  <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">new JArray()</CSharpValue>
+                </InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ForEach x:TypeArguments="njl:JToken" DisplayName="For Each lanJT" sap:VirtualizedContainerService.HintSize="488,2862" sap2010:WorkflowViewState.IdRef="ForEach`1_3">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="njl:JToken">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="njl:JToken" Name="lanJT" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,2736.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="LangName" />
+                      <Variable x:TypeArguments="ui:UiElement" Name="CurrButton" />
+                      <Variable x:TypeArguments="x:String" Name="CurrUrl" />
+                      <Variable x:TypeArguments="x:String" Name="CurrLanCode" />
+                      <Variable x:TypeArguments="njl:JObject" Name="CurrLanJO" />
+                      <Variable x:TypeArguments="x:String" Name="PrevUrl" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="njl:JObject">
+                          <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">CurrLanJO</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="njl:JObject">
+                          <CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">JObject.FromObject(lanJT)</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">LangName</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">CurrLanJO["LanguageName"].ToString()</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'LanguageSelector'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,229.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d91cf1ea-b383-42df-a050-0ed4d11361ac" Timeout="3" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="bible.com/reading-plans" CVScreenId="9051cd9c-6509-466e-816a-69fccb9f3663" ContentHash="dX2xEoVLt0WHE78Xz7QJfg" CvElementArea="2632, 389, 39, 39" CvType="Icon" DesignTimeRectangle="2638, 397, 27, 27" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentname='Language Selector' tag='path' /&gt;" Guid="1aaaf3dd-f6bb-43b7-9715-c2e288701c63" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHBSURBVFhHxZaNrcJADIOZgUlYpJN0EhZhESZhkj4ZyZX7NekV6SEsRaBeL06cH7gsP8SFD87g9Xotj8djud/v70/Z8/nka0OcJhfhPM/L9Xpt7Xa7vd85G8iQXKTTNO2IRqZAdPcIh+SSk04/MQWg0nRoyXWJzvSMz0Xg75Kc575XoSRXzUhgCZPMzZbvCXo33+sC2JGTWPU2WAZBRPnMzcYGVTBsxB15NlcSC+lM342UOu+wWelvQ86sGWmeZSdn9pa+OqPPDXmXmcDAiKwxg06/mf2GPJ1zRrPeDExIeUneKbOSjzLL6KvOzbpX51VwKzlHxjNtY+PwnJ3Nc45oS/5tszIrecr2bTvMfCSb12jaqCyHsmfDcVaFVMayJUYNmeSepJX8aBkIGRw3lZDkzsygb2Mz5ykdZ7mbVaPKzOiWV7teqx+CjD7PuswE7o92vQqZPTPslOky4x2Wa0fOLDIAKmN0ez2JeSbsyAUuHDl3HdMh/0zIBP6UVsRCSS5w6SgASco1Sll5T8ZSGC25UDn61Dh2iUNyoZLwjFXTQgzJDTlKyStzGUakxmlyQ0rIuZtNpdHnWcLEx+T/iZ+S/wEPU5/56yz0yAAAAABJRU5ErkJggg==" InformativeScreenshot="673f9a510b8fe5024043a80a9a77a3e5.png" Reference="UrhlpJTAA0mM_0uS1fnqrw/VmIMgpIBsE2acIrrlCBj6g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bible Reading Plans &amp;amp; Daily Devotionals | YouVersion Bible' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,179.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                      <ui:LogMessage.Message>
+                        <InArgument x:TypeArguments="x:Object">
+                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">"Clicking Language: " + LangName</CSharpValue>
+                        </InArgument>
+                      </ui:LogMessage.Message>
+                    </ui:LogMessage>
+                    <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" sap:VirtualizedContainerService.HintSize="452,139.33333333333334" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                      <ui:WaitUiElementAppear.FoundElement>
+                        <OutArgument x:TypeArguments="ui:UiElement">
+                          <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">ChooseYourLanguageModal</CSharpReference>
+                        </OutArgument>
+                      </ui:WaitUiElementAppear.FoundElement>
+                      <ui:WaitUiElementAppear.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d6671f85-f9a8-4778-a91f-ffb12c58b23f" InformativeScreenshot="c45009ebd3eb00192f70e2c0cb111463" Selector="&lt;webctrl tag='DIV' class='overflow-y-auto' /&gt;&lt;webctrl tag='DIV' class='*grid*grid*' /&gt;" TimeoutMS="3000" WaitForReady="COMPLETE" />
+                      </ui:WaitUiElementAppear.Target>
+                    </ui:WaitUiElementAppear>
+                    <ui:FindChildren DisplayName="Find Children - Buttons" Filter="&lt;webctrl tag='BUTTON'/&gt;" sap:VirtualizedContainerService.HintSize="452,119.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_DESCENDANTS">
+                      <ui:FindChildren.Children>
+                        <OutArgument x:TypeArguments="scg:IEnumerable(ui:UiElement)">
+                          <CSharpReference x:TypeArguments="scg:IEnumerable(ui:UiElement)" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">AllLanguageButtons</CSharpReference>
+                        </OutArgument>
+                      </ui:FindChildren.Children>
+                      <ui:FindChildren.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Id="9c7f74b4-14e8-4a7c-8150-7812e7f77c76" TimeoutMS="3000">
+                          <ui:Target.Element>
+                            <InArgument x:TypeArguments="ui:UiElement">
+                              <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23">ChooseYourLanguageModal</CSharpValue>
+                            </InArgument>
+                          </ui:Target.Element>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:FindChildren.Target>
+                    </ui:FindChildren>
+                    <Assign DisplayName="Get Button For Lan" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="ui:UiElement">
+                          <CSharpReference x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">CurrButton</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="ui:UiElement">
+                          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">AllLanguageButtons.First(b =&gt; b.Get("innertext", false).ToString().Contains(LangName))</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="452,121.33333333333333" sap2010:WorkflowViewState.IdRef="NGetUrl_3" Version="V4">
+                      <uix:NGetUrl.CurrentUrl>
+                        <OutArgument x:TypeArguments="x:String">
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">PrevUrl</CSharpReference>
+                        </OutArgument>
+                      </uix:NGetUrl.CurrentUrl>
+                    </uix:NGetUrl>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,211.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" Version="V4">
+                      <uix:NClick.InUiElement>
+                        <InArgument x:TypeArguments="ui:UiElement">
+                          <CSharpValue x:TypeArguments="ui:UiElement" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">CurrButton</CSharpValue>
+                        </InArgument>
+                      </uix:NClick.InUiElement>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While - Wait For New Url" sap:VirtualizedContainerService.HintSize="452,428" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                      <ui:InterruptibleDoWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,296" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NGetUrl DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="416,121.33333333333333" sap2010:WorkflowViewState.IdRef="NGetUrl_2" Version="V4">
+                            <uix:NGetUrl.CurrentUrl>
+                              <OutArgument x:TypeArguments="x:String">
+                                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">CurrUrl</CSharpReference>
+                              </OutArgument>
+                            </uix:NGetUrl.CurrentUrl>
+                          </uix:NGetUrl>
+                          <Delay sap:VirtualizedContainerService.HintSize="416,114.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_1">
+                            <InArgument x:TypeArguments="x:TimeSpan">
+                              <CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">TimeSpan.FromMilliseconds(500)</CSharpValue>
+                            </InArgument>
+                          </Delay>
+                        </Sequence>
+                      </ui:InterruptibleDoWhile.Body>
+                      <ui:InterruptibleDoWhile.Condition>
+                        <CSharpValue x:TypeArguments="x:Boolean" DisplayName="C sharp value" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41">PrevUrl == CurrUrl &amp;&amp; lanIndex !=0</CSharpValue>
+                      </ui:InterruptibleDoWhile.Condition>
+                    </ui:InterruptibleDoWhile>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetLanguageCodeFromUrl - Invoke Workflow File (Util\\GetLanguageCodeFromUrl.xaml)" sap:VirtualizedContainerService.HintSize="452,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Util\\GetLanguageCodeFromUrl.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <OutArgument x:TypeArguments="x:String" x:Key="out_LanguageCode">
+                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">CurrLanCode</CSharpReference>
+                        </OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Url">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">CurrUrl</CSharpValue>
+                        </InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_12">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="njl:JToken">
+                          <CSharpReference x:TypeArguments="njl:JToken" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">CurrLanJO["LanguageCode"]</CSharpReference>
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="njl:JToken">
+                          <CSharpValue x:TypeArguments="njl:JToken" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">JToken.FromObject(CurrLanCode)</CSharpValue>
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_JA.Add(in_JO);" DisplayName="Invoke Code - Add JO" sap:VirtualizedContainerService.HintSize="452,197.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_2" Language="CSharp">
+                      <ui:InvokeCode.Arguments>
+                        <InArgument x:TypeArguments="njl:JObject" x:Key="in_JO">
+                          <CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">CurrLanJO</CSharpValue>
+                        </InArgument>
+                        <InOutArgument x:TypeArguments="njl:JArray" x:Key="io_JA">
+                          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">out_LanguagesJA</CSharpReference>
+                        </InOutArgument>
+                      </ui:InvokeCode.Arguments>
+                    </ui:InvokeCode>
+                    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="452,167.33333333333334" sap2010:WorkflowViewState.IdRef="WriteTextFile_4">
+                      <ui:WriteTextFile.FileName>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">LanguageCodesFile</CSharpValue>
+                        </InArgument>
+                      </ui:WriteTextFile.FileName>
+                      <ui:WriteTextFile.Text>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">out_LanguagesJA.ToString()</CSharpValue>
+                        </InArgument>
+                      </ui:WriteTextFile.Text>
+                    </ui:WriteTextFile>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <ui:ForEach.CurrentIndex>
+                <OutArgument x:TypeArguments="x:Int32">
+                  <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">lanIndex</CSharpReference>
+                </OutArgument>
+              </ui:ForEach.CurrentIndex>
+              <ui:ForEach.Values>
+                <InArgument x:TypeArguments="sc:IEnumerable">
+                  <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">LanguageButtonsJA</CSharpValue>
+                </InArgument>
+              </ui:ForEach.Values>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="3829, -11, 3862, 2110" BrowserType="Chrome" ContentHash="h7_oKlyeE0WbTR_Mp1YQng" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAM2SURBVDhPbZPtT1NnGMafv4S5rTSD9pzTc05LX07HlixqtAbKq4AQmcQPnR8At2GVVZyZm0thWVskAaYtcVtG4t7SgDDa0hdoNWPgVBLiB0FnsnMWTWaWucSF617OgWHi9iS/3Feu+/59fNjengOsoEh1JUXOFRX5fslr14peWX2GtJONnSL/sqhICwVFatZdNu+W/TlFRl6RKeeRKOfeIm9kcXtKW7tt9FudrCI1s5RLWky7JUq5JaS9DqSrnchUOzHnFjH/hoKUS9zp9H3mNReM2y1nic04xQczLpGmZA755lqsnDpusNQbwPXAEawEe7DS100L7U24ebqPFlrrjVvdueoSVZZ0iGqySqTvRCsyTTW4PXgOtz5+n1aHPqQ53x6sXRiiGwNBmvI6cWc0QtOvK/jezkN3kg5RY1/bbeo3DhtdkThM7d+NTGcbsm8eormDdZjvbMNsQw2K3QHKdBykQqCLvvVU4Yqdh+7oLpuUBXXSLtCXggU/dLQgc/QwZlsbke7qQKE7QNMNNUgdacdklYz8saM009qIr2QBuqO77LIoqJ9LAsUrzMj2HsON2CCKoRMoBI/j1miUSqETVHyvjyZ4C1YvjlCysRYTghW6o7ssIfJqQuRpvMKMVPdbWDzTj+LZEOWCb6P0wQAK/X20OHCKpjvbsfTJebradRhxSUDcxlNc5FU2KnDquMDRKM/hkrsKlzxOfOaQEVdcSLzqwbgkIuH1YKJaQVxxG4wJHAxH4FR2gefUEZ6jYc6KmKXSYHh7xiorMGy17PSxymd9xFxOIzZeZZ9aLdqgyUTh8nKEbTzCooBwZQXCJhOM7jkGzWZEJRHZc2dpsq1FYx+9bHqQfLeX1lPTtNEfoo2ed2g9cZHWF9K0np39D/eL8/T43hoR/UVxf63Gzux6sbTxY57o6WOiPU1Ern1El7+grffkf/iTiECP7tyk81ZumZ0uMzWNNTbQb8vXaHN5iXB3jTZXf6bNp7/T5pOHz/GI/v7jIf16+ycaa6in/rKyQ0z/kidfeKllgLNdi/jr1Gh9vRbx+7Xofp8a8fm0qM+nxXz/5gPa0O69augVy/Vg2a4O3f0HAgpZR+Y2RQMAAAAASUVORK5CYII=" InformativeScreenshot="2612b3f6a1187cdb219653efddae78af.jpg" Reference="UrhlpJTAA0mM_0uS1fnqrw/81tL_Bb93UuQ_sV7fJ7xFQ" Selector="&lt;html app='chrome.exe' url='https://www.bible.com/*' /&gt;" Version="V2">
+          <uix:TargetApp.Url>
+            <InArgument x:TypeArguments="x:String">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">url</CSharpValue>
+            </InArgument>
+          </uix:TargetApp.Url>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
