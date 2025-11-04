@@ -19573,15 +19573,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Foley\\.nuget\\packages\\": {}
+    "C:\\Users\\jessi\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "ABS.UVPlans",
       "projectName": "ABS.UVPlans",
-      "projectPath": "C:\\_Repos_ABS\\YouVersionPlans\\ABS.UVPlans\\.local",
-      "packagesPath": "C:\\Users\\Foley\\.nuget\\packages\\",
-      "outputPath": "C:\\_Repos_ABS\\YouVersionPlans\\ABS.UVPlans\\.local",
+      "projectPath": "C:\\__Repos\\YouVersionPlans\\ABS.UVPlans\\.local",
+      "packagesPath": "C:\\Users\\jessi\\.nuget\\packages\\",
+      "outputPath": "C:\\__Repos\\YouVersionPlans\\ABS.UVPlans\\.local",
       "UsingMicrosoftNETSdk": false,
       "restoreAuditProperties": {
         "enableAudit": "False"
@@ -19606,7 +19606,7 @@
             "version": "[1.21.1, 1.21.1]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Foley\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\jessi\\AppData\\Local\\Programs\\UiPath\\Studio\\PortableRuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
