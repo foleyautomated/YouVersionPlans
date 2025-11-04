@@ -35,6 +35,7 @@
       <x:String>System.IO</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Platform</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -100,14 +101,16 @@
       <AssemblyReference>System.Diagnostics.PerformanceCounter</AssemblyReference>
       <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetAllPlansMetadata" sap:VirtualizedContainerService.HintSize="1276,2168" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetAllPlansMetadata" sap:VirtualizedContainerService.HintSize="1276,2343" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="PlanUrls" />
       <Variable x:TypeArguments="x:String" Default="Queues/en/LanguagePlanUrls.json" Name="LanguagePlanUrlsFile" />
       <Variable x:TypeArguments="njl:JArray" Name="PlansMetadataJA" />
       <Variable x:TypeArguments="x:String" Default="Queues/en/PlanMetadata.json" Name="PlansMetadataFile" />
+      <Variable x:TypeArguments="x:Int32" Name="planUrlIndex" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -138,13 +141,13 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each planUrl" sap:VirtualizedContainerService.HintSize="560,1795" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="x:String" DisplayName="For Each planUrl" sap:VirtualizedContainerService.HintSize="560,1970" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="planUrl" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,1673" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,1848" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="njl:JObject" Name="PlanMetadataJO" />
             </Sequence.Variables>
@@ -153,7 +156,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If DisplayName="If - Skip URLs We Already Have" sap:VirtualizedContainerService.HintSize="524,1613" sap2010:WorkflowViewState.IdRef="If_1">
+            <If DisplayName="If - Skip URLs We Already Have" sap:VirtualizedContainerService.HintSize="524,1788" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">PlansMetadataJA.ToString().Contains(planUrl)</CSharpValue>
@@ -176,25 +179,25 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,1257" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,1432" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="488,1197" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                  <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="488,1372" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
-                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="486,999" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="486,1174" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,939" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,1114" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                             <TryCatch.Try>
-                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,724" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,899" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -225,7 +228,7 @@
                                     </InOutArgument>
                                   </ui:InvokeCode.Arguments>
                                 </ui:InvokeCode>
-                                <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="WriteTextFile_4">
+                                <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_4">
                                   <ui:WriteTextFile.FileName>
                                     <InArgument x:TypeArguments="x:String">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">PlansMetadataFile</CSharpValue>
@@ -237,6 +240,13 @@
                                     </InArgument>
                                   </ui:WriteTextFile.Text>
                                 </ui:WriteTextFile>
+                                <ui:LogMessage DisplayName="Log Progress Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                                  <ui:LogMessage.Message>
+                                    <InArgument x:TypeArguments="x:Object">
+                                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">"GetAllPlansMetadata.xaml &gt;&gt; Finished " + planUrlIndex.ToString() + "/" + PlanUrls.Length.ToString()</CSharpValue>
+                                    </InArgument>
+                                  </ui:LogMessage.Message>
+                                </ui:LogMessage>
                               </Sequence>
                             </TryCatch.Try>
                             <TryCatch.Catches>
@@ -313,6 +323,11 @@
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
+      <ui:ForEach.CurrentIndex>
+        <OutArgument x:TypeArguments="x:Int32">
+          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">planUrlIndex</CSharpReference>
+        </OutArgument>
+      </ui:ForEach.CurrentIndex>
       <ui:ForEach.Values>
         <InArgument x:TypeArguments="sc:IEnumerable">
           <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">PlanUrls</CSharpValue>
