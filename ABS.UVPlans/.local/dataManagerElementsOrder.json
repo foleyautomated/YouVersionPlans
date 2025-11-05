@@ -113,6 +113,45 @@
       "ArgumentsSectionElementsOrder": null,
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/GetAllPlansMetadata.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "PlanMetadataJA&Sequence_2",
+        "PlansMetadataFile&Sequence_2",
+        "PlanUrls&Sequence_1",
+        "LanguagePlanUrlsFile&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Processes/GetAllLanguageCodes.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Util/GetLanguageCodeFromUrl.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Format/NextStep.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "GroupedMetadataJAFile&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
     }
   ]
 }
