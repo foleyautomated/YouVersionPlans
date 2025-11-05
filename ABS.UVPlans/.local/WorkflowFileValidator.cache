@@ -1,7 +1,9 @@
-Processes/GetAllLanguageCodes.xaml|638978809873996121
-Plans/GetCategoryListUrls.xaml|638974504212031387
-Plans/GetCategoryListPaginationUrls.xaml|638978788425411785
-Plans/GetAllCategoryListPaginationUrls.xaml|638978783274917038
-Plans/GetPlanUrlsFromPaginationUrl.xaml|638974581513510084
-Plans/GetPlanUrlsFromCategoryListPaginationUrls.xaml|638978792272708117
-Util/GetLanguageCodeFromUrl.xaml|638978808066419274
+Processes/GetAllPlansMetadata.xaml|638978017458646755
+Util/StripPublisherNameMoreFrom.xaml|638977986688177333
+Util/GetLanguageCodeFromUrl.xaml|638977986688167260
+Plans/GetPlanMetadata.xaml|638978015991381156
+Util/KillAllChromeProcesses.xaml|638978649731932918
+Util/StripPublisherNameMoreFrom.xaml|638977986688177333
+Util/GetLanguageCodeFromUrl.xaml|638978843934949909
+Processes/GetAllPlansMetadata.xaml|638978846538481766
+Plans/GetPlanMetadata.xaml|638978714320003484

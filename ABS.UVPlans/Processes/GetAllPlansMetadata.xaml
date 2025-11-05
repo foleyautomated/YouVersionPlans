@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetAllPlansMetadata" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetAllPlansMetadata" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scd="clr-namespace:System.ComponentModel.DataAnnotations;assembly=System.ComponentModel.Annotations" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -36,6 +36,7 @@
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Platform</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.ComponentModel.DataAnnotations</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -102,9 +103,10 @@
       <AssemblyReference>System.Diagnostics.TextWriterTraceListener</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetAllPlansMetadata" sap:VirtualizedContainerService.HintSize="1276,2343" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetAllPlansMetadata" sap:VirtualizedContainerService.HintSize="1276,3226" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="PlanUrls" />
       <Variable x:TypeArguments="x:String" Default="Queues/en/LanguagePlanUrls.json" Name="LanguagePlanUrlsFile" />
@@ -117,7 +119,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="PlanUrls" sap:VirtualizedContainerService.HintSize="560,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="PlanUrls" sap:VirtualizedContainerService.HintSize="598,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">
           <CSharpReference x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">PlanUrls</CSharpReference>
@@ -129,7 +131,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Start With Existing MetadataJA" sap:VirtualizedContainerService.HintSize="560,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="Start With Existing MetadataJA" sap:VirtualizedContainerService.HintSize="598,175" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JArray">
           <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">PlansMetadataJA</CSharpReference>
@@ -141,13 +143,13 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:String" DisplayName="For Each planUrl" sap:VirtualizedContainerService.HintSize="560,1970" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="x:String" DisplayName="For Each planUrl" sap:VirtualizedContainerService.HintSize="598,2853" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="planUrl" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,1848" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="596,2731" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="njl:JObject" Name="PlanMetadataJO" />
             </Sequence.Variables>
@@ -156,20 +158,20 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If DisplayName="If - Skip URLs We Already Have" sap:VirtualizedContainerService.HintSize="524,1788" sap2010:WorkflowViewState.IdRef="If_1">
+            <If DisplayName="If - Skip URLs We Already Have" sap:VirtualizedContainerService.HintSize="562,2671" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Condition>
                 <InArgument x:TypeArguments="x:Boolean">
                   <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">PlansMetadataJA.ToString().Contains(planUrl)</CSharpValue>
                 </InArgument>
               </If.Condition>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,226" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="560,226" sap2010:WorkflowViewState.IdRef="Sequence_10">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="526,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn">
                     <ui:LogMessage.Message>
                       <InArgument x:TypeArguments="x:Object">
                         <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">"Skipping Url: " + planUrl</CSharpValue>
@@ -179,31 +181,31 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="522,1432" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="560,2315" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="488,1372" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                  <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="526,2255" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
-                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="486,1174" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="524,2057" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,1114" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="490,1997" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                             <TryCatch.Try>
-                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,899" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="488,899" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetPlanMetadata" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Plans\\GetPlanMetadata.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetPlanMetadata" sap:VirtualizedContainerService.HintSize="454,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Plans\\GetPlanMetadata.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <OutArgument x:TypeArguments="njl:JObject" x:Key="out_PlanMetadataJO">
                                       <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">PlanMetadataJO</CSharpReference>
@@ -213,12 +215,12 @@
                                     </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
-                                <Delay sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="Delay_2">
+                                <Delay sap:VirtualizedContainerService.HintSize="454,123" sap2010:WorkflowViewState.IdRef="Delay_2">
                                   <InArgument x:TypeArguments="x:TimeSpan">
                                     <CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">TimeSpan.FromSeconds(2)</CSharpValue>
                                   </InArgument>
                                 </Delay>
-                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_plansMetadataJA.Add(in_planMetadataJO);" DisplayName="Invoke Code - Add PlanMetaJO" sap:VirtualizedContainerService.HintSize="416,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_plansMetadataJA.Add(in_planMetadataJO);" DisplayName="Invoke Code - Add PlanMetaJO" sap:VirtualizedContainerService.HintSize="454,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                                   <ui:InvokeCode.Arguments>
                                     <InArgument x:TypeArguments="njl:JObject" x:Key="in_planMetadataJO">
                                       <CSharpValue x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpValue`1_5">PlanMetadataJO</CSharpValue>
@@ -228,7 +230,7 @@
                                     </InOutArgument>
                                   </ui:InvokeCode.Arguments>
                                 </ui:InvokeCode>
-                                <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_4">
+                                <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="454,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_4">
                                   <ui:WriteTextFile.FileName>
                                     <InArgument x:TypeArguments="x:String">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">PlansMetadataFile</CSharpValue>
@@ -240,7 +242,7 @@
                                     </InArgument>
                                   </ui:WriteTextFile.Text>
                                 </ui:WriteTextFile>
-                                <ui:LogMessage DisplayName="Log Progress Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+                                <ui:LogMessage DisplayName="Log Progress Message" sap:VirtualizedContainerService.HintSize="454,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
                                   <ui:LogMessage.Message>
                                     <InArgument x:TypeArguments="x:Object">
                                       <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">"GetAllPlansMetadata.xaml &gt;&gt; Finished " + planUrlIndex.ToString() + "/" + PlanUrls.Length.ToString()</CSharpValue>
@@ -255,31 +257,31 @@
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,649" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KillAllChromeProcesses - Invoke Workflow File (Util\\KillAllChromeProcesses.xaml)" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Util\\KillAllChromeProcesses.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KillAllChromeProcesses - Invoke Workflow File (Util\\KillAllChromeProcesses.xaml)" sap:VirtualizedContainerService.HintSize="454,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Util\\KillAllChromeProcesses.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="454,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn">
                                       <ui:LogMessage.Message>
                                         <InArgument x:TypeArguments="x:Object">
                                           <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">"GetAllPlansMetadata.xaml &gt;&gt; Plan Metadata extraction failed. Waiting 10 seconds."</CSharpValue>
                                         </InArgument>
                                       </ui:LogMessage.Message>
                                     </ui:LogMessage>
-                                    <Delay sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                    <Delay sap:VirtualizedContainerService.HintSize="454,123" sap2010:WorkflowViewState.IdRef="Delay_1">
                                       <InArgument x:TypeArguments="x:TimeSpan">
                                         <CSharpValue x:TypeArguments="x:TimeSpan" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">TimeSpan.FromSeconds(10)</CSharpValue>
                                       </InArgument>
                                     </Delay>
-                                    <Throw sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1">
+                                    <Throw sap:VirtualizedContainerService.HintSize="454,114" sap2010:WorkflowViewState.IdRef="Throw_1">
                                       <InArgument x:TypeArguments="s:Exception">
                                         <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">exception</CSharpValue>
                                       </InArgument>
@@ -287,9 +289,30 @@
                                   </Sequence>
                                 </ActivityAction>
                               </Catch>
+                              <Catch x:TypeArguments="scd:ValidationException" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                <ActivityAction x:TypeArguments="scd:ValidationException">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="scd:ValidationException" Name="exception" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="488,226" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="454,166" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                                      <ui:LogMessage.Message>
+                                        <InArgument x:TypeArguments="x:Object">
+                                          <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">"Validation Exception At " + planUrl</CSharpValue>
+                                        </InArgument>
+                                      </ui:LogMessage.Message>
+                                    </ui:LogMessage>
+                                  </Sequence>
+                                </ActivityAction>
+                              </Catch>
                             </TryCatch.Catches>
                             <TryCatch.Finally>
-                              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="488,25" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
