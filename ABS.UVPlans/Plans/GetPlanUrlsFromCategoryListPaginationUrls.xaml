@@ -93,7 +93,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1332,1608" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1276,1424" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JArray" Name="CategoryListPaginationUrlsJA" />
       <Variable x:TypeArguments="x:String" Name="CategoryListPaginationFile" />
@@ -104,7 +104,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="CategoryListPaginationFile" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign DisplayName="CategoryListPaginationFile" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">CategoryListPaginationFile</CSharpReference>
@@ -116,7 +116,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
           <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">LanguagePlanUrlsFile</CSharpReference>
@@ -128,7 +128,7 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JArray">
           <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">CategoryListPaginationUrlsJA</CSharpReference>
@@ -140,13 +140,13 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each PaginationUrlJT" sap:VirtualizedContainerService.HintSize="488,1055.3333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each PaginationUrlJT" sap:VirtualizedContainerService.HintSize="452,876" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JToken">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JToken" Name="PaginationUrlJT" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,932.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,754" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="PaginationUrl" />
               <Variable x:TypeArguments="njl:JArray" Name="PlansUrlsJA" />
@@ -156,7 +156,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">
                   <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">PaginationUrl</CSharpReference>
@@ -168,14 +168,14 @@
                 </InArgument>
               </Assign.Value>
             </Assign>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info">
               <ui:LogMessage.Message>
                 <InArgument x:TypeArguments="x:Object">
                   <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">"Pagination URL: " + PaginationUrl</CSharpValue>
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetPlanUrlsFromPaginationUrl" sap:VirtualizedContainerService.HintSize="452,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Plans\\GetPlanUrlsFromPaginationUrl.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetPlanUrlsFromPaginationUrl" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Plans\\GetPlanUrlsFromPaginationUrl.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_CategoryPaginationUrl">
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">PaginationUrl</CSharpValue>
@@ -185,39 +185,18 @@
                 </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each urlJT" sap:VirtualizedContainerService.HintSize="452,342" sap2010:WorkflowViewState.IdRef="ForEach`1_2">
-              <ui:ForEach.Body>
-                <ActivityAction x:TypeArguments="njl:JToken">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="njl:JToken" Name="urlJT" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,219.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:AppendLine File="{x:Null}" DisplayName="Append Line" sap:VirtualizedContainerService.HintSize="416,159.33333333333334" sap2010:WorkflowViewState.IdRef="AppendLine_1" UseDefaultEncoding="False">
-                      <ui:AppendLine.FileName>
-                        <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_10">LanguagePlanUrlsFile</CSharpValue>
-                        </InArgument>
-                      </ui:AppendLine.FileName>
-                      <ui:AppendLine.Text>
-                        <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">urlJT.ToString()</CSharpValue>
-                        </InArgument>
-                      </ui:AppendLine.Text>
-                    </ui:AppendLine>
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEach.Body>
-              <ui:ForEach.Values>
-                <InArgument x:TypeArguments="sc:IEnumerable">
-                  <CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">PlansUrlsJA</CSharpValue>
+            <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
+              <ui:WriteTextFile.FileName>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">LanguagePlanUrlsFile</CSharpValue>
                 </InArgument>
-              </ui:ForEach.Values>
-            </ui:ForEach>
+              </ui:WriteTextFile.FileName>
+              <ui:WriteTextFile.Text>
+                <InArgument x:TypeArguments="x:String">
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">PlansUrlsJA.ToString()</CSharpValue>
+                </InArgument>
+              </ui:WriteTextFile.Text>
+            </ui:WriteTextFile>
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
