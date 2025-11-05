@@ -94,7 +94,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1276,1796" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1124,1796" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JArray" Name="CategoryListPaginationUrlsJA" />
       <Variable x:TypeArguments="x:String" Name="CategoryListPaginationFile" />
@@ -198,7 +198,7 @@
                 </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_resultJA.Add(in_newJA);" DisplayName="Invoke Code - Join Two JA" sap:VirtualizedContainerService.HintSize="416,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_resultJA.Merge(in_newJA);" DisplayName="Invoke Code - Join Two JA" sap:VirtualizedContainerService.HintSize="416,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
               <ui:InvokeCode.Arguments>
                 <InArgument x:TypeArguments="njl:JArray" x:Key="in_newJA">
                   <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">CurrentPlansUrlsJA</CSharpValue>
