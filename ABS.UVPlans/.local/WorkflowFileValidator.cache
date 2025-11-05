@@ -3,7 +3,9 @@ Util/StripPublisherNameMoreFrom.xaml|638977986688177333
 Util/GetLanguageCodeFromUrl.xaml|638977986688167260
 Plans/GetPlanMetadata.xaml|638978015991381156
 Util/KillAllChromeProcesses.xaml|638978649731932918
-Util/StripPublisherNameMoreFrom.xaml|638977986688177333
+Util/StripPublisherNameMoreFrom.xaml|638979170119638046
 Util/GetLanguageCodeFromUrl.xaml|638978843934949909
 Processes/GetAllPlansMetadata.xaml|638979148303850618
 Plans/GetPlanMetadata.xaml|638978714320003484
+Plans/GetPlanUrlsFromCategoryListPaginationUrls.xaml|638979151172065602
+Plans/GetPlanUrlsFromPaginationUrl.xaml|638979142405591899

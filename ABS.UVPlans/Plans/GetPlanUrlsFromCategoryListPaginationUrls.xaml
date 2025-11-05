@@ -1,5 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetPlanUrlsFromCategoryListPaginationUrls" this:GetPlanUrlsFromCategoryListPaginationUrls.in_LanguageCode="fr" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="out_AllLanguagePlanUrlsJA" Type="OutArgument(njl:JArray)" />
     <x:Property Name="in_LanguageCode" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
@@ -93,7 +94,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1276,1424" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1276,1796" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JArray" Name="CategoryListPaginationUrlsJA" />
       <Variable x:TypeArguments="x:String" Name="CategoryListPaginationFile" />
@@ -128,6 +129,18 @@
         </InArgument>
       </Assign.Value>
     </Assign>
+    <Assign DisplayName="Init JA" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="njl:JArray">
+          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">out_AllLanguagePlanUrlsJA</CSharpReference>
+        </OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="njl:JArray">
+          <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">new JArray()</CSharpValue>
+        </InArgument>
+      </Assign.Value>
+    </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="njl:JArray">
@@ -140,16 +153,16 @@
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each PaginationUrlJT" sap:VirtualizedContainerService.HintSize="452,876" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each PaginationUrlJT" sap:VirtualizedContainerService.HintSize="452,1073" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JToken">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JToken" Name="PaginationUrlJT" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,754" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,951" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="PaginationUrl" />
-              <Variable x:TypeArguments="njl:JArray" Name="PlansUrlsJA" />
+              <Variable x:TypeArguments="njl:JArray" Name="CurrentPlansUrlsJA" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -181,10 +194,20 @@
                   <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">PaginationUrl</CSharpValue>
                 </InArgument>
                 <OutArgument x:TypeArguments="njl:JArray" x:Key="out_PlanUrlsJA">
-                  <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">PlansUrlsJA</CSharpReference>
+                  <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">CurrentPlansUrlsJA</CSharpReference>
                 </OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="io_resultJA.Add(in_newJA);" DisplayName="Invoke Code - Join Two JA" sap:VirtualizedContainerService.HintSize="416,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+              <ui:InvokeCode.Arguments>
+                <InArgument x:TypeArguments="njl:JArray" x:Key="in_newJA">
+                  <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">CurrentPlansUrlsJA</CSharpValue>
+                </InArgument>
+                <InOutArgument x:TypeArguments="njl:JArray" x:Key="io_resultJA">
+                  <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">out_AllLanguagePlanUrlsJA</CSharpReference>
+                </InOutArgument>
+              </ui:InvokeCode.Arguments>
+            </ui:InvokeCode>
             <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
               <ui:WriteTextFile.FileName>
                 <InArgument x:TypeArguments="x:String">
@@ -193,7 +216,7 @@
               </ui:WriteTextFile.FileName>
               <ui:WriteTextFile.Text>
                 <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">PlansUrlsJA.ToString()</CSharpValue>
+                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">out_AllLanguagePlanUrlsJA.ToString()</CSharpValue>
                 </InArgument>
               </ui:WriteTextFile.Text>
             </ui:WriteTextFile>
