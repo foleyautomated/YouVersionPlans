@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetPlanUrlsFromCategoryListPaginationUrls" this:GetPlanUrlsFromCategoryListPaginationUrls.in_LanguageCode="fr" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetPlanUrlsFromCategoryListPaginationUrls" this:GetPlanUrlsFromCategoryListPaginationUrls.in_LanguageCode="es" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_AllLanguagePlanUrlsJA" Type="OutArgument(njl:JArray)" />
     <x:Property Name="in_LanguageCode" Type="InArgument(x:String)" />
@@ -94,10 +94,10 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1124,1796" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetPlanUrlsFromCategoryListPaginationUrls" sap:VirtualizedContainerService.HintSize="1148,1973" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JArray" Name="CategoryListPaginationUrlsJA" />
-      <Variable x:TypeArguments="x:String" Name="CategoryListPaginationFile" />
+      <Variable x:TypeArguments="x:String" Name="CategoryListPaginationUrlsFile" />
       <Variable x:TypeArguments="x:String" Name="LanguagePlanUrlsFile" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -108,7 +108,7 @@
     <Assign DisplayName="CategoryListPaginationFile" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">CategoryListPaginationFile</CSharpReference>
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">CategoryListPaginationUrlsFile</CSharpReference>
         </OutArgument>
       </Assign.To>
       <Assign.Value>
@@ -149,11 +149,11 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="njl:JArray">
-          <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">JArray.Parse(System.IO.File.ReadAllText(CategoryListPaginationFile))</CSharpValue>
+          <CSharpValue x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">JArray.Parse(System.IO.File.ReadAllText(CategoryListPaginationUrlsFile))</CSharpValue>
         </InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each PaginationUrlJT" sap:VirtualizedContainerService.HintSize="452,1073" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each PaginationUrlJT" sap:VirtualizedContainerService.HintSize="452,1082" sap2010:WorkflowViewState.IdRef="ForEach`1_1">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JToken">
           <ActivityAction.Argument>
@@ -229,5 +229,15 @@
         </InArgument>
       </ui:ForEach.Values>
     </ui:ForEach>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetDestinctLanguagePlanUrls - Invoke Workflow File (Plans\\GetDestinctLanguagePlanUrls.xaml)" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Plans\\GetDestinctLanguagePlanUrls.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LanguageCode">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">in_LanguageCode</CSharpValue>
+        </InArgument>
+        <OutArgument x:TypeArguments="njl:JArray" x:Key="out_DestinctLangaugePlanUrlsJA">
+          <CSharpReference x:TypeArguments="njl:JArray" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">out_AllLanguagePlanUrlsJA</CSharpReference>
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>

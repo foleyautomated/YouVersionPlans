@@ -9,4 +9,8 @@ Processes/GetAllPlansMetadata.xaml|638979148303850618
 Plans/GetPlanMetadata.xaml|638978714320003484
 Plans/GetPlanUrlsFromCategoryListPaginationUrls.xaml|638979175015941881
 Plans/GetPlanUrlsFromPaginationUrl.xaml|638979142405591899
-Plans/GetLanguagePlanUrls.xaml|638979180100930069
+Plans/GetLanguagePlanUrls.xaml|638979541937441373
+Plans/GetCategoryListUrls.xaml|638977986687917265
+Plans/GetCategoryListPaginationUrls.xaml|638979529849595700
+Plans/GetAllCategoryListPaginationUrls.xaml|638979520243557024
+Plans/GetDestinctLanguagePlanUrls.xaml|638979543868792275

@@ -97,6 +97,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>GlobalVariablesXhpHAHtCZ7</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="GetDestinctLanguagePlanUrls" sap:VirtualizedContainerService.HintSize="1148,1065" sap2010:WorkflowViewState.IdRef="Sequence_1">
